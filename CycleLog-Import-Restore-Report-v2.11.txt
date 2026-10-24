@@ -1,0 +1,34 @@
+CycleLog v2.11 — JSON Backup Import/Restore Change & Verification Report
+=======================================================================
+
+Changes
+- Added Import backup JSON to Settings.
+- Added validation for CycleLog app label, backup version, data structure, baseline readings, completed ride records, daily summaries, target/weekly goals, pending readings, and optional theme.
+- Added preview with ride count, totals, baseline, pending-readings state, and theme availability.
+- Restore requires explicit confirmation and replaces current local state only after validation.
+- Restores completed ride history, baseline readings, target weight, weekly distance goal, daily summaries, pending start readings, and theme when included.
+- Older backups without theme retain the current theme.
+- New JSON backups include theme and identify version 2.11.
+- Added rollback attempt if a storage write fails.
+- Incremented service-worker cache version to cyclelog-v26.
+- Preserved v2.10 mobile notification/toast fix and existing storage keys (cyclelog-v3, cyclelog-pending-v2, cyclelog-theme-v1).
+
+Verification
+- Static HTML element ID checks: see build output.
+- Inline JavaScript syntax: see build output.
+- Full browser end-to-end interaction test: NOT completed in this build environment. Please test valid v2.10/v2.11 backup, malformed JSON, unsupported version, cancel restore, confirm restore, dashboard totals, Log Ride baseline, History, pending readings, and both themes before production release.
+
+Safety note
+- Import replaces current app data. The UI warns the user and asks for confirmation before restoring. Download a backup of current data first if needed.
+- No files uploaded to GitHub.
+
+Static check results
+--------------------
+- JavaScript syntax: PASS
+- Literal getElementById references: PASS
+- Import UI and file input: PASS
+- Preview and confirmation controls: PASS
+- Version validation: PASS
+- Existing local storage keys preserved: PASS
+- Theme included in new backups: PASS
+- Service-worker cache incremented: PASS
