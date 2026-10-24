@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#142d25"><meta name="description" content="A personal indoor cycling tracker for cumulative meter readings."><link rel="manifest" href="manifest.webmanifest"><title>CycleLog — Indoor Cycling</title>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#142d25"><meta name="description" content="A personal indoor cycling tracker for cumulative meter readings."><link rel="manifest" href="manifest.webmanifest"><title>CycleLog — Indoor Cycling · v2.9</title>
 <style>
 :root{--ink:#18251f;--muted:#68766f;--line:#e2e9e4;--paper:#f5f8f5;--card:#fff;--green:#245b43;--green2:#dceee2;--orange:#f5c56b;--red:#a53d36;--radius:22px}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.45 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,input,select{font:inherit}button{cursor:pointer}.app{max-width:620px;margin:0 auto;padding:0 17px 32px}.top{margin:0 -17px;background:#142d25;color:white;padding:23px 21px 25px;border-radius:0 0 28px 28px}.topline{display:flex;justify-content:space-between;align-items:center}.brand{font-size:13px;letter-spacing:.13em;text-transform:uppercase;color:#c2d9ca;font-weight:800}.pill{font-size:12px;padding:6px 10px;border-radius:30px;background:#29483b;color:#e3f1e8}.top h1{font-size:28px;line-height:1.12;margin:22px 0 7px;letter-spacing:-.7px}.top p{margin:0;color:#c8d9ce;font-size:14px}.nav{display:flex;gap:7px;margin:17px 0 19px;background:#e7eee8;padding:5px;border-radius:15px}.nav button{flex:1;border:0;background:transparent;color:#627168;border-radius:11px;padding:10px 5px;font-size:13px;font-weight:750}.nav button.active{background:white;color:var(--green);box-shadow:0 2px 7px #16332212}.section{display:none}.section.active{display:block}.section-title{font-size:20px;letter-spacing:-.4px;margin:3px 0 5px}.sub{font-size:13px;color:var(--muted);margin:0 0 16px}.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:17px;margin-bottom:13px;box-shadow:0 4px 15px #172f2010}.cardhead{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:13px}.cardhead h3{margin:0;font-size:15px}.smalltag{font-size:11px;background:#eff4ef;color:#53685a;border-radius:20px;padding:5px 8px}.metrics{display:grid;grid-template-columns:1fr 1fr;gap:10px}.metric{background:#f6f9f6;border-radius:15px;padding:13px}.metric .label{font-size:12px;color:var(--muted)}.metric strong{display:block;font-size:23px;letter-spacing:-.5px;margin:5px 0 1px}.metric small{font-size:11px;color:var(--muted)}label{display:block;font-size:13px;font-weight:700;margin-bottom:7px}.field{margin-bottom:15px}input{width:100%;border:1px solid #d8e1da;border-radius:12px;padding:13px 12px;background:#fff;color:var(--ink);outline:none}input:focus,select:focus{border-color:#4d8968;box-shadow:0 0 0 3px #dceee2}.duration{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}.duration select{width:100%;border:1px solid #d8e1da;border-radius:12px;padding:13px 8px;background:#fff;color:var(--ink);min-width:0}.full-select{width:100%;border:1px solid #d8e1da;border-radius:12px;padding:13px 12px;background:#fff;color:var(--ink)}input:disabled,select:disabled{background:#eef2ee;color:#66766c;border-color:#e0e7e1;opacity:1}.sub-label{font-size:11px;font-weight:700;color:var(--muted);margin-bottom:6px}.dateweight{display:grid;grid-template-columns:1fr 1fr;gap:10px}.dateweight .field{min-width:0}.dateweight input{padding:13px 9px}.help{font-size:12px;color:var(--muted);margin-top:6px}.twocol{display:grid;grid-template-columns:1fr 1fr;gap:11px}.btn{width:100%;border:0;border-radius:13px;padding:14px 16px;background:var(--green);color:white;font-weight:800}.btn.secondary{background:#edf3ee;color:var(--green);border:1px solid #dbe7dd}.btn.danger{background:#fff0ef;color:var(--red);border:1px solid #f0d5d2}.calc{background:#edf6ef;border:1px solid #d7e9dc;border-radius:15px;padding:13px;margin:2px 0 15px}.calc-title{font-size:12px;color:#526b5a;font-weight:750;margin-bottom:9px}.calcgrid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}.calcgrid span{display:block;font-size:11px;color:#62776a}.calcgrid strong{font-size:14px;display:block;margin-top:3px}.notice{font-size:12px;line-height:1.5;color:#6b5940;background:#fff7e8;border:1px solid #f1e0b9;border-radius:13px;padding:11px;margin-bottom:14px}.historyrow{display:grid;grid-template-columns:1fr auto;gap:10px;padding:13px 0;border-bottom:1px solid var(--line)}.historyrow:last-child{border-bottom:0}.historyrow strong{font-size:14px}.historyrow .meta{font-size:12px;color:var(--muted);margin-top:3px}.historyrow .value{text-align:right;font-size:13px;font-weight:750}.empty{text-align:center;padding:25px 10px;color:var(--muted);font-size:13px}.goalbar{height:9px;background:#e8eee9;border-radius:9px;overflow:hidden;margin:10px 0}.goalbar div{height:100%;background:#3d805b;border-radius:9px;width:0}.footer{text-align:center;color:#839087;font-size:11px;padding:15px 8px}.toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:#172d23;color:white;padding:12px 17px;border-radius:14px;box-shadow:0 8px 28px #0002;font-size:13px;display:none;max-width:calc(100% - 30px);z-index:10}.mini{font-size:11px;color:var(--muted)}
 /* Log ride refresh: clear hierarchy, calm contrast, and better touch targets. */
@@ -35,7 +35,12 @@
 @media(max-width:390px){#log .dateweight{grid-template-columns:1fr 1fr;gap:9px}#log .dateweight input{padding:12px 8px}#log .time-panel{padding:10px}#log .time-selects{gap:3px}#log .time-part{gap:2px}#log .time-part select{font-size:13px;padding:9px 0}#log .time-part span{font-size:8px}}
 
 /* Dashboard visual refresh */
-.dashboard-view .sub{margin-bottom:18px}.dash-hero{background:linear-gradient(135deg,#173c2d 0%,#286447 100%);color:#fff;border-radius:24px;padding:20px;margin:0 0 21px;position:relative;overflow:hidden;box-shadow:0 12px 26px #153b2920}.dash-hero:after{content:"";position:absolute;width:190px;height:190px;border:1px solid #ffffff1b;border-radius:50%;right:-65px;top:-70px;box-shadow:0 0 0 24px #ffffff08,0 0 0 48px #ffffff06}.dash-hero-top{display:flex;align-items:center;justify-content:space-between;gap:10px;position:relative;z-index:1}.dash-eyebrow{font-size:10px;font-weight:850;letter-spacing:.13em;color:#b9d7c4;margin-bottom:8px}.dash-eyebrow.dark{color:#718579;margin-bottom:4px}.dash-hero-title{font-size:27px;line-height:1.08;font-weight:850;letter-spacing:-.8px}.dash-bike{width:62px;height:62px;border-radius:20px;display:grid;place-items:center;background:#ffffff17;font-size:32px;transform:rotate(-7deg)}.dash-hero-bottom{display:flex;align-items:center;gap:17px;margin-top:22px;padding-top:15px;border-top:1px solid #ffffff28;position:relative;z-index:1}.dash-hero-bottom span,.goal-numbers span{display:block;font-size:11px;color:#c6ddce;margin-bottom:3px}.dash-hero-bottom strong{font-size:18px;letter-spacing:-.3px}.dash-hero-rule{width:1px;height:34px;background:#ffffff35}.dash-section-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:0 2px 11px}.dash-section-head h3,.goal-card h3,.daily-card h3{font-size:16px;margin:0;letter-spacing:-.25px}.dash-metrics{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}.dash-metric{border-radius:19px;padding:14px;min-width:0;border:1px solid #e5ece6;background:#fff;box-shadow:0 4px 13px #172f2008}.dash-metric .label{font-size:12px;color:#68766f}.dash-metric strong{display:block;font-size:22px;letter-spacing:-.7px;margin:5px 0 2px;overflow-wrap:anywhere}.dash-metric small{font-size:10px;color:#819087;line-height:1.35}.dash-metric-icon{display:grid;place-items:center;width:30px;height:30px;border-radius:10px;margin-bottom:10px;font-size:19px;font-weight:800}.dash-time .dash-metric-icon{background:#e1f1e6;color:#286447}.dash-distance .dash-metric-icon{background:#e5edff;color:#4366a3}.dash-calories .dash-metric-icon{background:#fff0d8;color:#9a681b}.dash-weight .dash-metric-icon{background:#f7e7ef;color:#9a4e72}.goal-card{background:linear-gradient(145deg,#fff 0%,#f8fbf8 100%)}.goal-chip{background:#e4f2e7;color:#286447;border-radius:30px;padding:6px 10px;font-size:11px;font-weight:800;white-space:nowrap}.goal-numbers{display:flex;justify-content:space-between;gap:10px;margin-top:17px}.goal-numbers span{color:#7a8980}.goal-numbers strong{font-size:19px;letter-spacing:-.4px}.goal-target{text-align:right}.goal-card .goalbar{height:10px;background:#e5ece6;margin:15px 0 9px}.goal-card .goalbar div{background:linear-gradient(90deg,#367b54,#74b486);transition:width .35s ease}.daily-card{padding-bottom:9px}.daily-mark{font-size:11px;color:#6b7e72;background:#eff4ef;border-radius:30px;padding:5px 8px}.daily-card .historyrow{padding:14px 0}.daily-card .historyrow:first-child{padding-top:4px}.daily-card .historyrow strong{font-size:13px}.daily-card .historyrow .value{color:#286447;font-size:13px}.daily-card .historyrow .meta{font-size:11px}.dashboard-view .card{box-shadow:0 5px 18px #172f2008}
+.dashboard-view .sub{margin-bottom:18px}.dash-hero{background:linear-gradient(135deg,#173c2d 0%,#286447 100%);color:#fff;border-radius:24px;padding:20px;margin:0 0 21px;position:relative;overflow:hidden;box-shadow:0 12px 26px #153b2920}.dash-hero:after{content:"";position:absolute;width:190px;height:190px;border:1px solid #ffffff1b;border-radius:50%;right:-65px;top:-70px;box-shadow:0 0 0 24px #ffffff08,0 0 0 48px #ffffff06}.dash-hero-top{display:flex;align-items:center;justify-content:space-between;gap:10px;position:relative;z-index:1}.dash-eyebrow{font-size:10px;font-weight:850;letter-spacing:.13em;color:#b9d7c4;margin-bottom:8px}.dash-eyebrow.dark{color:#718579;margin-bottom:4px}.dash-hero-title{font-size:27px;line-height:1.08;font-weight:850;letter-spacing:-.8px}.dash-bike{width:62px;height:62px;border-radius:20px;display:grid;place-items:center;background:#ffffff17;font-size:32px;transform:rotate(-7deg)}.dash-hero-bottom{display:flex;align-items:center;gap:17px;margin-top:22px;padding-top:15px;border-top:1px solid #ffffff28;position:relative;z-index:1}.dash-hero-bottom span,.goal-numbers span{display:block;font-size:11px;color:#c6ddce;margin-bottom:3px}.dash-hero-bottom strong{font-size:18px;letter-spacing:-.3px}.dash-hero-rule{width:1px;height:34px;background:#ffffff35}.dash-section-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:0 2px 11px}.dash-section-head h3,.goal-card h3,.daily-card h3{font-size:16px;margin:0;letter-spacing:-.25px}.dash-metrics{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}.dash-metric{border-radius:19px;padding:14px;min-width:0;border:1px solid #e5ece6;background:#fff;box-shadow:0 4px 13px #172f2008}.dash-metric .label{font-size:12px;color:#68766f}.dash-metric strong{display:block;font-size:22px;letter-spacing:-.7px;margin:5px 0 2px;overflow-wrap:anywhere}.dash-metric small{font-size:10px;color:#819087;line-height:1.35}.dash-metric-icon{display:grid;place-items:center;width:30px;height:30px;border-radius:10px;margin-bottom:10px;font-size:19px;font-weight:800}.dash-time .dash-metric-icon{background:#e1f1e6;color:#286447}.dash-distance .dash-metric-icon{background:#e5edff;color:#4366a3}.dash-calories .dash-metric-icon{background:#fff0d8;color:#9a681b}.dash-weight .dash-metric-icon{background:#f7e7ef;color:#9a4e72}.goal-card{background:linear-gradient(145deg,#fff 0%,#f8fbf8 100%)}.goal-chip{background:#e4f2e7;color:#286447;border-radius:30px;padding:6px 10px;font-size:11px;font-weight:800;white-space:nowrap}.goal-numbers{display:flex;justify-content:space-between;gap:10px;margin-top:17px}.goal-numbers span{color:#7a8980}.goal-numbers strong{font-size:19px;letter-spacing:-.4px}.goal-target{text-align:right}.goal-card .goalbar{height:10px;background:#e5ece6;margin:15px 0 9px}.goal-card .goalbar div{background:linear-gradient(90deg,#367b54,#74b486);transition:width .35s ease}
+/* Tiny cyclist travels along the weight-progress track as progress changes. */
+.goal-card .goalbar{position:relative;overflow:visible}
+.goal-card .goalbar #goalFill{height:100%;border-radius:9px}
+.goal-card .goalbar .goal-cyclist{position:absolute;left:0%;top:50%;width:29px;height:26px;overflow:visible;color:#245b43;transform:translate(-8%,-61%);z-index:2;transition:left .4s ease;filter:drop-shadow(0 1px 1px #ffffffb8);pointer-events:none}
+.daily-card{padding-bottom:9px}.daily-mark{font-size:11px;color:#6b7e72;background:#eff4ef;border-radius:30px;padding:5px 8px}.daily-card .historyrow{padding:14px 0}.daily-card .historyrow:first-child{padding-top:4px}.daily-card .historyrow strong{font-size:13px}.daily-card .historyrow .value{color:#286447;font-size:13px}.daily-card .historyrow .meta{font-size:11px}.dashboard-view .card{box-shadow:0 5px 18px #172f2008}
 @media(min-width:560px){.top{padding:28px 25px}.app{padding-left:22px;padding-right:22px}.top{margin-left:-22px;margin-right:-22px}}
 
 /* Keep the Prediction card directly below Weight progress on every screen size. */
@@ -60,31 +65,810 @@
 #log .weight-field .help{margin-top:6px}
 #log .ride-time-field{margin-bottom:18px}
 @media(max-width:390px){#log .log-form-card{padding:14px}#log .dateweight{gap:12px}#log .time-pair{gap:9px}#log .time-display,#log .time-entry{padding:12px 5px;font-size:15px}#log .dateweight .help{font-size:11px}}
+
+/* CycleLog v1.3 History review and date filtering */
+.history-filter-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.history-filter-grid .field,.history-tools .field{min-width:0;margin-bottom:12px}
+.history-filter-actions{display:flex;justify-content:flex-start}
+.history-totals{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:0 0 14px}
+.history-total{background:#f1f6f2;border:1px solid #e1eae2;border-radius:12px;padding:10px;min-width:0}
+.history-total span{display:block;font-size:11px;color:var(--muted);margin-bottom:4px}
+.history-total strong{font-size:15px;overflow-wrap:anywhere}
+.historyrow{gap:12px}
+.historyrow .value{white-space:nowrap}
+.history-detail{font-size:12px;color:var(--muted);line-height:1.5;margin-top:5px;overflow-wrap:anywhere}
+@media(max-width:390px){.history-filter-grid{gap:8px}.history-totals{gap:5px}.history-total{padding:8px 6px}.history-total strong{font-size:13px}.history-total span{font-size:10px}.historyrow{align-items:flex-start}}
+
+/* CycleLog v1.4: polished dark theme */
+:root{color-scheme:light;--page:#f4f7f4;--surface:#ffffff;--surface-soft:#f6faf7;--ink:#14241b;--muted:#64756a;--line:#e0e9e2;--accent:#2f7650;--accent-strong:#205b3b;--accent-soft:#e6f2e9;--shadow:0 8px 24px rgba(24,55,36,.055)}
+body{background:var(--page);color:var(--ink)}
+.card,.panel,.stat-card,.goal-card,.hero-card{background:var(--surface);color:var(--ink);border-color:var(--line);box-shadow:var(--shadow)}
+input,select,textarea{background:var(--surface);color:var(--ink);border-color:var(--line)}
+.sub,.meta,.help,.muted,.mini,.history-detail{color:var(--muted)}
+.btn.secondary{background:var(--surface-soft);color:var(--ink);border-color:var(--line)}
+.history-total{background:var(--surface-soft);border-color:var(--line)}
+.empty{background:var(--surface-soft);color:var(--muted)}
+.theme-setting-row{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.theme-copy{min-width:0}
+.theme-copy strong{display:block}
+.theme-copy .sub{margin:5px 0 0}
+.theme-switch{position:relative;display:inline-flex;flex:0 0 auto;align-items:center;cursor:pointer}
+.theme-switch input{position:absolute;opacity:0;width:1px;height:1px}
+.theme-switch-track{width:48px;height:28px;background:#cbd7ce;border-radius:99px;padding:3px;display:flex;align-items:center;transition:background .2s}
+.theme-switch-knob{width:22px;height:22px;background:#fff;border-radius:50%;box-shadow:0 1px 4px #0002;transition:transform .2s}
+.theme-switch input:checked+.theme-switch-track{background:#5aa878}
+.theme-switch input:checked+.theme-switch-track .theme-switch-knob{transform:translateX(20px)}
+.theme-switch input:focus-visible+.theme-switch-track{outline:3px solid #78b68e;outline-offset:3px}
+body.dark-mode{color-scheme:dark;--page:#101713;--surface:#19231d;--surface-soft:#202d25;--ink:#e8f1ea;--muted:#a7b8ac;--line:#34463a;--accent:#7ac493;--accent-strong:#a0dfb3;--accent-soft:#243c2c;--shadow:0 10px 28px rgba(0,0,0,.18);background:var(--page);color:var(--ink)}
+body.dark-mode .card,body.dark-mode .panel,body.dark-mode .stat-card,body.dark-mode .goal-card,body.dark-mode .hero-card{background:var(--surface);color:var(--ink);border-color:var(--line);box-shadow:var(--shadow)}
+body.dark-mode input,body.dark-mode select,body.dark-mode textarea{background:#111a14;color:var(--ink);border-color:var(--line)}
+body.dark-mode input::placeholder,body.dark-mode textarea::placeholder{color:#879a8c}
+body.dark-mode .btn.secondary{background:var(--surface-soft);color:var(--ink);border-color:var(--line)}
+body.dark-mode .history-total{background:var(--surface-soft);border-color:var(--line)}
+body.dark-mode .empty{background:var(--surface-soft);color:var(--muted);border-color:var(--line)}
+body.dark-mode .goal-card .goalbar{background:#34453a}
+body.dark-mode .goal-card .goalbar #goalFill{background:linear-gradient(90deg,#4f9a6a,#8ed6a4)}
+body.dark-mode .goal-card .goalbar .goal-cyclist{color:#b2edc1;filter:drop-shadow(0 1px 2px #0008)}
+body.dark-mode .nav,body.dark-mode .bottom-nav{background:var(--surface);border-color:var(--line)}
+body.dark-mode .nav button,body.dark-mode .bottom-nav button{color:var(--muted)}
+body.dark-mode .nav button.active,body.dark-mode .bottom-nav button.active{color:var(--accent-strong);background:var(--accent-soft)}
+body.dark-mode hr,body.dark-mode .divider{border-color:var(--line)}
+body.dark-mode .smalltag{background:var(--surface-soft);color:var(--muted);border-color:var(--line)}
+body.dark-mode .theme-switch-track{background:#4b5d50}
+body.dark-mode .theme-switch input:checked+.theme-switch-track{background:#5aa878}
+@media(max-width:390px){.theme-setting-row{gap:10px}.theme-copy .sub{font-size:12px}}
+@media(prefers-reduced-motion:reduce){.theme-switch-track,.theme-switch-knob,.goalbar #goalFill,.goalbar .goal-cyclist{transition:none!important}}
+
+
+/* CycleLog v1.5 — complete dark-mode contrast fixes for hard-coded component colors */
+body.dark-mode #log .log-form-card,
+body.dark-mode #log .card,
+body.dark-mode .card{background:var(--surface)!important;color:var(--ink)!important;border-color:var(--line)!important}
+body.dark-mode #log .time-panel,
+body.dark-mode #log .saved-panel,
+body.dark-mode #log .current-panel{
+  background:#202e25!important;color:#e8f1ea!important;border-color:#3c5745!important;box-shadow:none!important
+}
+body.dark-mode #log .time-panel-head{color:#c6e6ce!important}
+body.dark-mode #log .time-panel-head em,
+body.dark-mode #log .time-part span{color:#a8b9ad!important}
+body.dark-mode #log .time-colon{color:#b8cabe!important}
+body.dark-mode #log .time-part select,
+body.dark-mode #log input,
+body.dark-mode #log select,
+body.dark-mode #log textarea,
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode textarea{
+  background:#111a14!important;color:#e8f1ea!important;border-color:#405546!important;
+  color-scheme:dark
+}
+body.dark-mode #log input::placeholder,
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder{color:#91a698!important;opacity:1}
+body.dark-mode #log .start-reading{background:#111a14!important;color:#e8f1ea!important}
+body.dark-mode #log .calc{
+  background:linear-gradient(135deg,#20382a,#1b2d22)!important;
+  color:#eaf4ec!important;border-color:#3c5b45!important
+}
+body.dark-mode #log .calc-title,
+body.dark-mode #log .calc label,
+body.dark-mode #log .calc span,
+body.dark-mode #log .calc .sub,
+body.dark-mode #log .calc .help{color:#b8d8c1!important}
+body.dark-mode #log .calc strong,
+body.dark-mode #log .calc b,
+body.dark-mode #log .calc [id]{color:#e8f4eb}
+body.dark-mode #log .optional-tag{background:#294b36!important;color:#b9e7c6!important}
+body.dark-mode #log .help,
+body.dark-mode #log .sub-label,
+body.dark-mode #log label{color:#b4c6b8}
+body.dark-mode #log .btn,
+body.dark-mode .btn{color:#eaf4ec}
+body.dark-mode #log .btn.secondary,
+body.dark-mode .btn.secondary{background:#24352a!important;color:#eaf4ec!important;border-color:#405546!important}
+body.dark-mode .dash-metric,
+body.dark-mode .dash-metrics .dash-metric{
+  background:#19271f!important;color:#e8f1ea!important;border-color:#344b3b!important;box-shadow:0 5px 18px #0003!important
+}
+body.dark-mode .dash-metric .label{color:#c0d0c4!important}
+body.dark-mode .dash-metric strong{color:#e8f4eb!important}
+body.dark-mode .dash-metric small{color:#a6b8aa!important}
+body.dark-mode .dash-time .dash-metric-icon{background:#294b36!important;color:#a7e4b8!important}
+body.dark-mode .dash-distance .dash-metric-icon{background:#283b56!important;color:#b7ceff!important}
+body.dark-mode .dash-calories .dash-metric-icon{background:#4b3923!important;color:#ffd79b!important}
+body.dark-mode .dash-weight .dash-metric-icon{background:#482c3a!important;color:#ffc0d7!important}
+body.dark-mode .goal-numbers span,
+body.dark-mode .goal-numbers strong,
+body.dark-mode .goal-card h3,
+body.dark-mode .goal-card .cardhead,
+body.dark-mode .daily-card h3{color:#e8f1ea!important}
+body.dark-mode .goal-card .dash-eyebrow.dark{color:#a9c6b1!important}
+body.dark-mode .goal-card .goal-chip{background:#294b36!important;color:#c6efd0!important}
+body.dark-mode .goal-card .goalbar{background:#34473a!important}
+body.dark-mode .goal-card .goalbar #goalFill{background:linear-gradient(90deg,#4f9a6a,#8ed6a4)!important}
+body.dark-mode .goal-card .goalbar .goal-cyclist{color:#b2edc1!important}
+body.dark-mode .daily-card,
+body.dark-mode .history-tools,
+body.dark-mode .history-total{background:var(--surface-soft)!important;color:var(--ink)!important;border-color:var(--line)!important}
+body.dark-mode .historyrow,
+body.dark-mode .historyrow strong,
+body.dark-mode .historyrow .value{color:var(--ink)!important}
+body.dark-mode .history-detail,
+body.dark-mode .historyrow .mini{color:var(--muted)!important}
+body.dark-mode .empty{background:#202d25!important;color:#b6c8bb!important;border-color:#34463a!important}
+body.dark-mode .smalltag{background:#26372b!important;color:#c1d5c6!important;border-color:#3a5040!important}
+body.dark-mode .footer{color:#9daf9f!important}
+body.dark-mode .theme-setting-card{background:var(--surface)!important}
+body.dark-mode .theme-switch-track{background:#4b5d50}
+body.dark-mode .theme-switch input:checked+.theme-switch-track{background:#5aa878}
+
+
+/* CycleLog v1.6 — vibrant, cohesive light and dark palettes */
+:root{
+  --page:#f3f8f5;--surface:#ffffff;--surface-soft:#f5faf7;
+  --ink:#152b20;--muted:#5d7567;--line:#dbe9df;
+  --accent:#23764a;--accent-strong:#185b38;--accent-soft:#e0f4e7;
+  --shadow:0 10px 30px rgba(31,91,57,.075)
+}
+body{background:radial-gradient(ellipse at 12% 0%,#e3f5e9 0,transparent 32%),var(--page);color:var(--ink)}
+.card{border-color:var(--line);box-shadow:var(--shadow)}
+.btn:not(.secondary):not(.danger){background:linear-gradient(135deg,#257b4d,#17603d);color:#fff;border-color:#257b4d}
+.btn:not(.secondary):not(.danger):hover{filter:brightness(1.06)}
+.btn.danger{background:#c73743!important;color:#fff!important;border:1px solid #b72c38!important;box-shadow:0 4px 12px #c7374326}
+.btn.danger:hover{background:#ad2632!important}
+.prediction-card{background:linear-gradient(145deg,#e5f8ec 0%,#edf5ff 58%,#f7f4ff 100%)!important;border-color:#cfe7d7!important}
+.prediction-card .prediction-icon{background:linear-gradient(145deg,#d0f1dc,#d9e9ff);color:#17613c}
+.prediction-stat:nth-child(1){background:linear-gradient(135deg,#fff,#f0fbf3)!important;border-color:#d6ebdc!important}
+.prediction-stat:nth-child(2){background:linear-gradient(135deg,#fff,#f0f6ff)!important;border-color:#d9e5f8!important}
+.prediction-stat:nth-child(3){background:linear-gradient(135deg,#fff,#f7f1ff)!important;border-color:#e6daf7!important}
+.prediction-stat span{color:#526b5c!important}
+.prediction-stat strong{color:#174c32!important}
+.prediction-note{background:#e2f2e7!important;color:#3e614b!important;border:1px solid #d1e8d8}
+.goal-card{background:linear-gradient(145deg,#ffffff,#f1faf4)!important}
+.goal-card .goalbar{background:#dce9df}
+.daily-mark,.smalltag{border-radius:999px}
+body.dark-mode{
+  --page:#0e1712;--surface:#18271e;--surface-soft:#203328;
+  --ink:#edf8ef;--muted:#b0c7b7;--line:#344e3c;
+  --accent:#7cdda0;--accent-strong:#b2f0c5;--accent-soft:#244b32;
+  --shadow:0 12px 32px rgba(0,0,0,.22);
+  background:radial-gradient(ellipse at 12% 0%,#183d2a 0,transparent 34%),var(--page);color:var(--ink)
+}
+body.dark-mode .card,
+body.dark-mode .panel,
+body.dark-mode .stat-card,
+body.dark-mode .goal-card,
+body.dark-mode .hero-card{
+  background:linear-gradient(145deg,#1a2b21,#17251d)!important;
+  color:var(--ink)!important;border-color:#365341!important;box-shadow:var(--shadow)!important
+}
+body.dark-mode .prediction-card{
+  background:linear-gradient(145deg,#193d2a 0%,#1b3040 56%,#2a2440 100%)!important;
+  border-color:#3b6550!important
+}
+body.dark-mode .prediction-card .prediction-icon{
+  background:linear-gradient(145deg,#28583a,#2c4664)!important;color:#c1f4ce!important
+}
+body.dark-mode .prediction-stat:nth-child(1){
+  background:linear-gradient(135deg,#203c2b,#1d3327)!important;border-color:#3c6348!important
+}
+body.dark-mode .prediction-stat:nth-child(2){
+  background:linear-gradient(135deg,#203447,#1b2c3b)!important;border-color:#3b5873!important
+}
+body.dark-mode .prediction-stat:nth-child(3){
+  background:linear-gradient(135deg,#302843,#252137)!important;border-color:#51416c!important
+}
+body.dark-mode .prediction-stat span{color:#c1d8c8!important}
+body.dark-mode .prediction-stat strong{color:#f0fff3!important}
+body.dark-mode .prediction-note{
+  background:linear-gradient(135deg,#254633,#24374b)!important;
+  color:#d0e9d7!important;border-color:#3b5c48!important
+}
+body.dark-mode .goal-card{background:linear-gradient(145deg,#1a3023,#17291f)!important}
+body.dark-mode .goal-card .goalbar{background:#344c3a!important}
+body.dark-mode .btn:not(.secondary):not(.danger){background:linear-gradient(135deg,#3b9a60,#26764a)!important;color:#fff!important;border-color:#429c64!important}
+body.dark-mode .btn.secondary{background:linear-gradient(135deg,#263c2e,#203328)!important;color:#eaf7ed!important;border-color:#42614b!important}
+body.dark-mode .btn.danger{background:linear-gradient(135deg,#d84a55,#ad2936)!important;color:#fff!important;border-color:#f06b75!important;box-shadow:0 4px 16px #0004!important}
+body.dark-mode .btn.danger:hover{filter:brightness(1.08)}
+body.dark-mode .daily-mark{background:#2a4634!important;color:#c7e7d0!important}
+body.dark-mode .history-total{background:linear-gradient(135deg,#21382a,#1d2e24)!important}
+body.dark-mode .theme-setting-card{background:linear-gradient(145deg,#1a2b21,#17251d)!important}
+@media(prefers-reduced-motion:reduce){.btn,.card,.prediction-stat{transition:none!important}}
+
+
+/* CycleLog v1.7 — vibrant Log Ride form and compact time labels */
+#log .log-form-card{
+  background:linear-gradient(155deg,#ffffff 0%,#f3fbf5 58%,#f2f7ff 100%)!important;
+  border:1px solid #cfe5d6!important;
+  box-shadow:0 14px 34px rgba(28,94,56,.10)!important
+}
+#log .dateweight>div{
+  background:linear-gradient(145deg,#f0fbf3,#f4f8ff);
+  border:1px solid #d7e9dc;border-radius:16px;padding:12px
+}
+#log .dateweight label{color:#205d3a}
+#log .ride-time-field>label{color:#205d3a;font-size:15px}
+#log .time-panels{gap:12px}
+#log .time-panel{
+  background:linear-gradient(140deg,#e8f7ee 0%,#f4fbf6 100%)!important;
+  border:1px solid #c5e4cf!important;
+  box-shadow:inset 0 1px 0 #ffffff,0 5px 14px rgba(35,112,66,.06)!important
+}
+#log .time-panel.current-panel{
+  background:linear-gradient(140deg,#eaf2ff 0%,#f8faff 100%)!important;
+  border-color:#c9daf9!important;
+  box-shadow:inset 0 1px 0 #ffffff,0 5px 14px rgba(56,98,174,.07)!important
+}
+#log .time-panel-head{color:#245b3b!important}
+#log .current-panel .time-panel-head{color:#315b9b!important}
+#log .saved-dot{background:#299b5c!important}
+#log .current-dot{background:#4c83df!important}
+#log .time-part select{
+  background:#fff!important;color:#193a28!important;border-color:#cfe3d5!important;
+  box-shadow:0 2px 5px rgba(25,73,43,.04);font-weight:800
+}
+#log .current-panel .time-part select{border-color:#d0def5!important;color:#203d70!important}
+#log .time-part span{color:#6b7d70!important;font-weight:700}
+#log .time-colon{color:#58926b!important}
+#log input{
+  background:linear-gradient(180deg,#fff,#fbfefc)!important;
+  border-color:#d3e5d8!important;color:#183a27!important;
+  box-shadow:inset 0 1px 2px rgba(24,67,39,.025)
+}
+#log input:focus,#log select:focus{
+  outline:3px solid rgba(62,153,94,.16)!important;border-color:#4eaa70!important
+}
+#log .calc{
+  background:linear-gradient(120deg,#e2f6e9 0%,#e8f1ff 56%,#f4eaff 100%)!important;
+  border:1px solid #cfe4d6!important;color:#194b2e!important;
+  box-shadow:0 7px 18px rgba(38,99,61,.07)!important
+}
+#log .calc-title{color:#32664a!important;font-weight:900}
+#log .calcgrid>div:nth-child(1) span{color:#34734a!important}
+#log .calcgrid>div:nth-child(2) span{color:#3d68ad!important}
+#log .calcgrid>div:nth-child(3) span{color:#8050a2!important}
+#log .calcgrid strong{color:#163e29!important}
+#log #saveStart{
+  background:linear-gradient(120deg,#287c4b,#36a766)!important;color:#fff!important;
+  border:1px solid #2a8a51!important;box-shadow:0 6px 15px rgba(38,133,72,.18)!important
+}
+#log #toggleLock{
+  background:linear-gradient(120deg,#e7efff,#f1eaff)!important;color:#36528c!important;
+  border:1px solid #d6dff6!important
+}
+#log #save{
+  background:linear-gradient(120deg,#1c7544,#2e9b5c 60%,#4388db)!important;
+  color:#fff!important;border:1px solid #2d8b58!important;
+  box-shadow:0 8px 18px rgba(37,115,69,.2)!important
+}
+#log .help,#log .mini{color:#617968}
+body.dark-mode #log .log-form-card{
+  background:linear-gradient(150deg,#172a1e 0%,#1a2b28 55%,#1c2538 100%)!important;
+  border-color:#385a43!important
+}
+body.dark-mode #log .dateweight>div{
+  background:linear-gradient(145deg,#203b2a,#202d42)!important;border-color:#3a5943!important
+}
+body.dark-mode #log .dateweight label,
+body.dark-mode #log .ride-time-field>label{color:#c7f0d1!important}
+body.dark-mode #log .time-panel{
+  background:linear-gradient(140deg,#203c2a,#1b3025)!important;
+  border-color:#42674c!important;box-shadow:inset 0 1px 0 #ffffff08!important
+}
+body.dark-mode #log .time-panel.current-panel{
+  background:linear-gradient(140deg,#20334b,#20283d)!important;
+  border-color:#425d83!important
+}
+body.dark-mode #log .time-panel-head{color:#b9ebc7!important}
+body.dark-mode #log .current-panel .time-panel-head{color:#c0d6ff!important}
+body.dark-mode #log .time-part select{
+  background:#101a13!important;color:#eaf8ee!important;border-color:#42644b!important;
+  box-shadow:none!important
+}
+body.dark-mode #log .current-panel .time-part select{
+  background:#111a29!important;color:#e8efff!important;border-color:#425b82!important
+}
+body.dark-mode #log .time-part span{color:#b4c7b8!important}
+body.dark-mode #log .current-panel .time-part span{color:#b6c9eb!important}
+body.dark-mode #log .time-colon{color:#a5e4b5!important}
+body.dark-mode #log input{
+  background:linear-gradient(180deg,#111b14,#142019)!important;
+  color:#eaf8ee!important;border-color:#42644b!important;box-shadow:none!important
+}
+body.dark-mode #log input:focus,body.dark-mode #log select:focus{
+  outline:3px solid #70cb8c35!important;border-color:#80d49a!important
+}
+body.dark-mode #log .calc{
+  background:linear-gradient(120deg,#1d422b 0%,#20364d 56%,#352643 100%)!important;
+  border-color:#45664d!important;color:#effbf1!important;box-shadow:0 8px 20px #0003!important
+}
+body.dark-mode #log .calc-title{color:#d2f0da!important}
+body.dark-mode #log .calcgrid>div:nth-child(1) span{color:#b4eac0!important}
+body.dark-mode #log .calcgrid>div:nth-child(2) span{color:#bdd2ff!important}
+body.dark-mode #log .calcgrid>div:nth-child(3) span{color:#e0c1ff!important}
+body.dark-mode #log .calcgrid strong{color:#f4fff6!important}
+body.dark-mode #log #saveStart{
+  background:linear-gradient(120deg,#2a8d50,#3bb86d)!important;color:#fff!important;border-color:#4ac578!important
+}
+body.dark-mode #log #toggleLock{
+  background:linear-gradient(120deg,#2b3f5c,#3c2e56)!important;color:#e4eaff!important;border-color:#50638b!important
+}
+body.dark-mode #log #save{
+  background:linear-gradient(120deg,#27854e,#36a966 60%,#477fe0)!important;color:#fff!important;border-color:#53b877!important
+}
+body.dark-mode #log .help,body.dark-mode #log .mini{color:#b2c9b8!important}
+@media(max-width:390px){
+  #log .time-panel{padding:10px 9px!important}
+  #log .time-part select{font-size:14px!important;padding:9px 1px!important}
+  #log .dateweight>div{padding:10px}
+}
+
+
+/* CycleLog v2.0 — calming blue, lavender, and warm-neutral palette */
+:root{
+ --page:#f4f6fb;--surface:#ffffff;--surface-soft:#f7f8fd;
+ --ink:#202b42;--muted:#66748c;--line:#e0e5f0;
+ --accent:#5977c8;--accent-strong:#3f5eae;--accent-soft:#e8edff;
+ --shadow:0 10px 28px rgba(52,72,125,.075)
+}
+body{
+ background:radial-gradient(ellipse at 8% 0%,#e8edff 0,transparent 34%),
+            radial-gradient(ellipse at 96% 18%,#f1eaff 0,transparent 28%),var(--page);
+ color:var(--ink)
+}
+.card,.panel,.stat-card,.goal-card,.hero-card{border-color:var(--line);box-shadow:var(--shadow)}
+.goal-card{background:linear-gradient(145deg,#fff 0%,#f4f6ff 62%,#f8f3ff 100%)!important}
+.goal-card .goalbar{background:#e0e6f3!important}
+.goal-card .goalbar #goalFill{background:linear-gradient(90deg,#6f8fe0,#8a79d8,#71b7b4)!important}
+.goal-card .goalbar .goal-cyclist{
+ width:auto!important;height:auto!important;font-size:25px;line-height:1;
+ color:#4f69b5!important;filter:drop-shadow(0 2px 2px #5266a52b)!important;
+ transform:translate(-8%,-62%) scaleX(-1)!important;white-space:nowrap
+}
+.goal-card .goal-chip{background:#e8edff!important;color:#425fae!important}
+.goal-numbers span{color:#687792}
+#log .log-form-card{background:linear-gradient(150deg,#fff,#f5f7ff 62%,#fbf7ff)!important;border-color:#dce2f1!important}
+#log .time-panel{background:linear-gradient(140deg,#edf1ff,#f7f8ff)!important;border-color:#d8e0f7!important}
+#log .time-panel.current-panel{background:linear-gradient(140deg,#f1eaff,#fbf8ff)!important;border-color:#e2d8f6!important}
+#log .time-panel-head{color:#425fae!important}
+#log .current-panel .time-panel-head{color:#7654a5!important}
+#log .time-part select{border-color:#d4ddf1!important;color:#263c69!important}
+#log .current-panel .time-part select{border-color:#e0d6f2!important;color:#513b7a!important}
+#log .calc{background:linear-gradient(120deg,#e7edff,#f0e9ff 58%,#e3f5f3)!important;border-color:#d7def2!important;color:#263a62!important}
+#log .calc-title{color:#425fae!important}
+#log #saveStart{background:linear-gradient(120deg,#5878ce,#7770cf)!important;border-color:#5e73c8!important;color:#fff!important}
+#log #save{background:linear-gradient(120deg,#536fc4,#7d70d1 62%,#4a9e9a)!important;border-color:#6677c6!important;color:#fff!important}
+#log #toggleLock{background:linear-gradient(120deg,#e8edff,#f1eaff)!important;color:#4a5da2!important;border-color:#d9def5!important}
+body.dark-mode{
+ --page:#111722;--surface:#1b2433;--surface-soft:#222d40;
+ --ink:#edf1fb;--muted:#b2bdd2;--line:#344159;
+ --accent:#9aabff;--accent-strong:#c0caff;--accent-soft:#2b3655;
+ --shadow:0 12px 32px rgba(0,0,0,.24);
+ background:radial-gradient(ellipse at 8% 0%,#202d4a 0,transparent 35%),
+            radial-gradient(ellipse at 96% 18%,#302541 0,transparent 28%),var(--page);
+ color:var(--ink)
+}
+body.dark-mode .card,body.dark-mode .panel,body.dark-mode .stat-card,body.dark-mode .goal-card,body.dark-mode .hero-card{
+ background:linear-gradient(145deg,#1c2738,#1b2331)!important;color:var(--ink)!important;border-color:#39465e!important;box-shadow:var(--shadow)!important
+}
+body.dark-mode .goal-card{background:linear-gradient(145deg,#1c2a40 0%,#25243c 65%,#1c3038 100%)!important}
+body.dark-mode .goal-card .goalbar{background:#344056!important}
+body.dark-mode .goal-card .goalbar #goalFill{background:linear-gradient(90deg,#6f8fe0,#a18be6,#6fc4bd)!important}
+body.dark-mode .goal-card .goalbar .goal-cyclist{color:#d5ddff!important;filter:drop-shadow(0 2px 3px #0008)!important}
+body.dark-mode .goal-card .goal-chip{background:#303c5b!important;color:#dce3ff!important}
+body.dark-mode #log .log-form-card{background:linear-gradient(150deg,#1b2637,#20253a 65%,#242238)!important;border-color:#3b4964!important}
+body.dark-mode #log .time-panel{background:linear-gradient(140deg,#25344e,#202b41)!important;border-color:#435779!important}
+body.dark-mode #log .time-panel.current-panel{background:linear-gradient(140deg,#342c49,#29243a)!important;border-color:#57466f!important}
+body.dark-mode #log .time-panel-head{color:#d0dcff!important}
+body.dark-mode #log .current-panel .time-panel-head{color:#e0cfff!important}
+body.dark-mode #log .time-part select{background:#141e2c!important;color:#eef2ff!important;border-color:#4b5d7c!important}
+body.dark-mode #log .current-panel .time-part select{background:#1b1728!important;color:#f2eaff!important;border-color:#625078!important}
+body.dark-mode #log .calc{background:linear-gradient(120deg,#273657,#342a4c 58%,#1f3c40)!important;border-color:#465778!important;color:#edf1ff!important}
+body.dark-mode #log .calc-title{color:#d5ddff!important}
+body.dark-mode #log #saveStart{background:linear-gradient(120deg,#5b7cdb,#8375dd)!important;border-color:#8795ed!important;color:#fff!important}
+body.dark-mode #log #save{background:linear-gradient(120deg,#5978d0,#8778db 62%,#459d99)!important;border-color:#8a8be0!important;color:#fff!important}
+body.dark-mode #log #toggleLock{background:linear-gradient(120deg,#303d5c,#3a2d50)!important;color:#e6eaff!important;border-color:#4a567a!important}
+body.dark-mode .goal-numbers span,body.dark-mode .goal-numbers strong{color:#edf1fb!important}
+@media(max-width:390px){.goal-card .goalbar .goal-cyclist{font-size:22px}}
+
+
+/* CycleLog v2.9 — clean GitHub release defaults */
+.goal-card .goalbar .goal-cyclist{
+  transform:translate(0,-62%) scaleX(-1)!important;
+  left:0;
+}
+body.dark-mode .goal-card .goalbar .goal-cyclist{
+  transform:translate(0,-62%) scaleX(-1)!important;
+  left:0;
+}
+
+
+/* CycleLog v2.6 — continuous forward-cycling scene and tagline */
+[hidden]{display:none!important}
+.welcome-screen{min-height:100svh;position:relative;overflow:hidden;display:grid;place-items:center;padding:28px 22px;background:radial-gradient(circle at 15% 10%,#e2e9ff 0,transparent 30%),radial-gradient(circle at 90% 85%,#e7f5f3 0,transparent 32%),#f5f6fc;color:#24314a}
+.welcome-content{position:relative;z-index:2;width:min(100%,440px);text-align:center}
+.welcome-brand{display:flex;align-items:center;justify-content:center;gap:9px;font-size:13px;font-weight:900;letter-spacing:.18em;color:#526bc0}
+.welcome-brand-icon{font-size:24px}
+.welcome-illustration{height:180px;position:relative;margin:24px 0 14px;overflow:hidden;border-radius:28px;background:linear-gradient(140deg,#e4eaff,#f4efff 62%,#dff4f1)}
+.welcome-sun{position:absolute;width:86px;height:86px;border-radius:50%;right:50px;top:24px;background:#f9dca2;opacity:.85}
+.welcome-road{position:absolute;left:-8%;right:-8%;bottom:18px;height:60px;border-radius:50%;background:#c7d1e4;transform:rotate(-5deg)}
+.welcome-road:after{content:"";position:absolute;left:0;right:0;top:28px;border-top:3px dashed #f8f9ff}
+.welcome-rider{position:absolute;left:45%;bottom:35px;font-size:60px;transform:scaleX(1);filter:drop-shadow(0 6px 5px #445b8a20)}
+.welcome-eyebrow{font-size:11px;font-weight:900;letter-spacing:.17em;color:#6b78ad;margin:0 0 10px}
+.welcome-content h1{font-size:clamp(32px,8vw,43px);line-height:1.06;letter-spacing:-1.6px;margin:0 0 14px;color:#26334b}
+.welcome-copy{max-width:350px;margin:0 auto 18px;color:#65718a;font-size:15px}
+.welcome-features{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:0 auto 24px}
+.welcome-features span{background:#fff;border:1px solid #e0e5f2;color:#52617d;border-radius:30px;padding:7px 10px;font-size:11px;font-weight:700}
+.welcome-start{background:linear-gradient(115deg,#5979cf,#8276d5 65%,#4eaaa2)!important;box-shadow:0 10px 24px #6576c52b!important}
+.welcome-start span{float:right;font-size:18px;line-height:1}
+.welcome-skip{border:0;background:transparent;color:#68758e;padding:14px;font-weight:700;font-size:13px}
+.welcome-orbit{position:absolute;border:1px solid #aab9e53d;border-radius:50%;pointer-events:none}
+.orbit-one{width:360px;height:360px;top:-230px;right:-120px}.orbit-two{width:450px;height:450px;bottom:-300px;left:-210px}
+.compact-sub{margin:4px 0 0;font-size:12px}
+.insight-tabs,.chart-metric-switch{display:flex;gap:4px;background:var(--surface-soft,#f4f6fb);border-radius:11px;padding:4px}
+.insight-tab,.metric-tab{border:0;border-radius:8px;background:transparent;color:var(--muted);font-size:11px;font-weight:800;padding:7px 8px}
+.insight-tab.active,.metric-tab.active{background:var(--card);color:var(--accent);box-shadow:0 1px 5px #182b4612}
+.chart-legend{display:flex;align-items:center;gap:7px;font-size:11px;color:var(--muted);margin:10px 0}
+.legend-dot{width:8px;height:8px;border-radius:50%;background:#7186d7}
+.progress-chart{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:7px;align-items:end;height:142px;padding:8px 0 0}
+.chart-column{height:100%;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:7px;min-width:0}
+.chart-value{font-size:9px;color:var(--muted);white-space:nowrap;max-width:100%;overflow:hidden;text-overflow:ellipsis}
+.chart-bar-track{width:min(100%,24px);height:96px;display:flex;align-items:flex-end;border-radius:9px;background:var(--surface-soft,#f4f6fb);overflow:hidden}
+.chart-bar{width:100%;min-height:0;border-radius:9px;background:linear-gradient(180deg,#9b8be8,#7189d8);transition:height .25s}
+.chart-day{font-size:9px;color:var(--muted)}
+.chart-foot{font-size:11px;color:var(--muted);margin:9px 0 12px}
+.chart-metric-switch{display:inline-flex}
+.records-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.record-item{min-width:0;border-radius:14px;background:var(--surface-soft,#f4f6fb);padding:11px 9px}
+.record-item span,.record-item small{display:block;color:var(--muted);font-size:10px;line-height:1.35}
+.record-item strong{display:block;font-size:16px;letter-spacing:-.4px;margin:8px 0 4px;overflow-wrap:anywhere}
+.record-medal{display:grid;place-items:center;width:34px;height:34px;border-radius:12px;background:#f0eaff;color:#7a68c8}
+.weekly-goal-track{height:11px;border-radius:20px;background:var(--line);overflow:hidden;margin:15px 0 8px}
+.weekly-goal-track>div{height:100%;width:0;background:linear-gradient(90deg,#7189d8,#9a8be3,#66b7b0);border-radius:inherit;transition:width .25s}
+.weekly-goal-meta{display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:12px}
+.weekly-goal-meta span{color:var(--muted);text-align:right}
+.history-filter-grid,.history-filter-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+body.dark-mode .welcome-screen{background:radial-gradient(circle at 15% 10%,#293654 0,transparent 31%),radial-gradient(circle at 90% 85%,#243b3b 0,transparent 32%),#111722;color:#edf1fb}
+body.dark-mode .welcome-brand{color:#b7c4ff}
+body.dark-mode .welcome-illustration{background:linear-gradient(140deg,#263553,#342b4a 62%,#203d3e)}
+body.dark-mode .welcome-sun{background:#9c7c49}
+body.dark-mode .welcome-road{background:#35415a}
+body.dark-mode .welcome-road:after{border-color:#a8b8d6}
+body.dark-mode .welcome-content h1{color:#f0f3ff}
+body.dark-mode .welcome-copy,body.dark-mode .welcome-skip{color:#b3bfd5}
+body.dark-mode .welcome-eyebrow{color:#b5c0fa}
+body.dark-mode .welcome-features{color:#e5eaff}
+body.dark-mode .welcome-features span{background:#202b3d;border-color:#394760;color:#d2dcf1}
+body.dark-mode .insight-tabs,body.dark-mode .chart-metric-switch{background:#202b3d}
+body.dark-mode .insight-tab.active,body.dark-mode .metric-tab.active{background:#34415b;color:#e4e9ff}
+body.dark-mode .chart-bar-track{background:#263247}
+body.dark-mode .chart-bar{background:linear-gradient(180deg,#a99bed,#7e98ec)}
+body.dark-mode .record-item{background:#202b3d}
+body.dark-mode .record-medal{background:#3b3155;color:#ded5ff}
+body.dark-mode .weekly-goal-track{background:#344159}
+body.dark-mode .history-filter-grid input,body.dark-mode #historyActivityFilter{background:#141e2c;color:#eef2ff;border-color:#40516d}
+@media(max-width:640px){
+  body{padding-bottom:calc(82px + env(safe-area-inset-bottom))}
+  .app{padding-bottom:20px}
+  .nav{position:fixed;z-index:100;left:10px;right:10px;bottom:calc(8px + env(safe-area-inset-bottom));margin:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:2px;padding:7px 5px;border:1px solid #dce3f1;background:rgba(255,255,255,.94);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-radius:19px;box-shadow:0 9px 32px #192b481f}
+  .nav button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:6px 2px;min-height:53px;font-size:10px;line-height:1.15;color:#68758e}
+  .nav button .nav-icon{font-size:19px;line-height:1.1}
+  .nav button.active{background:#e9edff;color:#4e68bc;box-shadow:none}
+  body.dark-mode .nav{background:rgba(27,36,51,.95);border-color:#3b4964;box-shadow:0 9px 32px #0005}
+  body.dark-mode .nav button{color:#b2bdd2}
+  body.dark-mode .nav button.active{background:#34415d;color:#e2e8ff}
+  .progress-chart{gap:4px}
+  .chart-bar-track{width:min(100%,20px)}
+  .records-grid{gap:6px}
+  .record-item{padding:10px 7px}
+  .record-item strong{font-size:14px}
+  .cardhead{align-items:flex-start}
+}
+@media(min-width:641px){.welcome-screen{min-height:100vh}.nav{position:static}}
+
+
+/* CycleLog v2.2 visual refinements */
+.time-part>span{display:none!important}
+.chart-bar{min-height:0}
+.chart-bar[style*="height: 0%"],.chart-bar[style*="height:0%"]{height:0!important}
+
+
+/* CycleLog v2.5 — animated welcome and safer reset */
+.welcome-illustration{isolation:isolate}
+.welcome-rider{
+  z-index:3;left:8%;bottom:35px;transform:none;
+  animation:cycleForward 7s ease-in-out infinite alternate;
+  will-change:left,transform;
+}
+.welcome-road:after{animation:roadFlow 1.1s linear infinite}
+.welcome-illustration:before{
+  content:"";position:absolute;z-index:2;left:-30%;top:35%;
+  width:26%;height:3px;border-radius:99px;background:#fff;
+  box-shadow:18px 15px 0 -0.5px #fff,38px -10px 0 -0.5px #fff;
+  opacity:.7;animation:windFlow 2.4s linear infinite;
+}
+.welcome-sun{animation:sunGlow 4s ease-in-out infinite alternate}
+@keyframes cycleForward{
+  0%{left:7%;transform:translateY(0) scaleX(1)}
+  48%{transform:translateY(-3px) scaleX(1)}
+  100%{left:75%;transform:translateY(0) scaleX(1)}
+}
+@keyframes roadFlow{to{background-position:44px 0}}
+@keyframes windFlow{from{left:-30%}to{left:115%}}
+@keyframes sunGlow{from{opacity:.72;transform:scale(.98)}to{opacity:1;transform:scale(1.04)}}
+@media(prefers-reduced-motion:reduce){
+ .welcome-rider,.welcome-road:after,.welcome-illustration:before,.welcome-sun{animation:none!important}
+ .welcome-rider{left:42%;transform:scaleX(1)}
+}
+
+
+.reset-overlay{position:fixed;inset:0;z-index:10000;display:grid;place-items:center;padding:20px;background:rgba(18,26,44,.58);backdrop-filter:blur(5px)}
+.reset-overlay[hidden]{display:none!important}
+.reset-dialog{width:min(100%,420px);padding:26px;border-radius:22px;background:var(--surface,#fff);color:var(--text,#20304b);border:1px solid var(--border,#dce3f2);box-shadow:0 24px 80px #10172a40}
+.reset-warning-icon{display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:#fff0e7;color:#c74632;font-weight:900;font-size:26px;margin-bottom:12px}
+.reset-dialog h2{margin:0 0 10px;font-size:25px}
+.reset-dialog p{line-height:1.5}
+.reset-advice{font-size:14px;color:var(--muted,#63718a)}
+.reset-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:22px}
+.reset-actions .btn{width:100%;margin:0}
+body.dark-mode .reset-dialog{background:#17243a;color:#f0f4ff;border-color:#33435f}
+body.dark-mode .reset-warning-icon{background:#462d35;color:#ffb5a7}
+
+
+/* CycleLog v2.6 — continuous forward-cycling scene */
+.top-tagline{margin:7px 0 0;color:var(--muted,#65718a);font-size:15px;line-height:1.45}
+.welcome-illustration{background:linear-gradient(180deg,#e9edff 0%,#f2edff 58%,#dff4f1 100%)}
+.welcome-scenery{
+  position:absolute;z-index:1;left:0;right:0;top:0;height:72%;
+  background:
+    radial-gradient(ellipse 38px 15px at 12% 35%,rgba(255,255,255,.85) 0 65%,transparent 70%),
+    radial-gradient(ellipse 30px 12px at 18% 31%,rgba(255,255,255,.8) 0 65%,transparent 70%),
+    radial-gradient(ellipse 48px 16px at 66% 25%,rgba(255,255,255,.72) 0 65%,transparent 70%),
+    radial-gradient(ellipse 34px 12px at 72% 21%,rgba(255,255,255,.7) 0 65%,transparent 70%),
+    linear-gradient(145deg,transparent 0 56%,rgba(164,187,220,.35) 56% 72%,transparent 72%),
+    linear-gradient(25deg,transparent 0 60%,rgba(190,202,232,.5) 60% 78%,transparent 78%);
+  background-size:220px 100%,220px 100%,300px 100%,300px 100%,100% 100%,100% 100%;
+  animation:landscapeDrift 8s linear infinite;
+}
+.welcome-rider{
+  z-index:4;left:43%;bottom:35px;transform:scaleX(1);
+  animation:pedalBounce .42s ease-in-out infinite alternate;
+  transform-origin:center bottom;will-change:transform;
+}
+.welcome-road{z-index:2;animation:roadTravel 1.25s linear infinite}
+.welcome-road:after{
+  left:0;right:auto;width:200%;background:repeating-linear-gradient(90deg,transparent 0 13px,#f8f9ff 13px 24px,transparent 24px 36px);
+  border:0;height:3px;top:28px;animation:roadMarkings 1.25s linear infinite;
+}
+.welcome-illustration:before{
+  z-index:3;left:0;top:34%;width:100%;height:2px;background:repeating-linear-gradient(90deg,transparent 0 16px,rgba(255,255,255,.9) 16px 42px,transparent 42px 70px);
+  box-shadow:none;opacity:.72;animation:windTravel 1.8s linear infinite;
+}
+.welcome-wind{position:absolute;z-index:3;right:-35%;top:48%;width:45%;height:2px;background:repeating-linear-gradient(90deg,transparent 0 12px,#fff 12px 40px,transparent 40px 58px);opacity:.7;animation:windTravel 2.3s linear infinite}
+@keyframes pedalBounce{from{transform:translateY(0) scaleX(-1) rotate(-1deg)}to{transform:translateY(-3px) scaleX(-1) rotate(1deg)}}
+@keyframes landscapeDrift{from{background-position:0 0,0 0,0 0,0 0,0 0,0 0}to{background-position:-440px 0,-440px 0,-600px 0,-600px 0,0 0,0 0}}
+@keyframes roadTravel{from{background-position:0 0}to{background-position:-100px 0}}
+@keyframes roadMarkings{from{transform:translateX(0)}to{transform:translateX(-60px)}}
+@keyframes windTravel{from{transform:translateX(0)}to{transform:translateX(-150px)}}
+@media(prefers-reduced-motion:reduce){
+ .welcome-rider,.welcome-scenery,.welcome-road,.welcome-road:after,.welcome-illustration:before,.welcome-wind,.welcome-sun{animation:none!important}
+ .welcome-rider{left:43%;transform:scaleX(-1)}
+}
+
 </style></head>
-<body><main class="app">
-<header class="top"><div class="topline"><div class="brand">CycleLog</div><div class="pill">Personal tracker</div></div><h1>Every ride counts.</h1><p>Log your efforts. A thousand-mile journey starts with a single step.</p></header>
-<nav class="nav"><button class="active" data-tab="log">Log ride</button><button data-tab="dashboard">Dashboard</button><button data-tab="history">History</button><button data-tab="settings">Settings</button></nav>
+<body>
+<div id="welcomeScreen" class="welcome-screen" hidden>
+  <div class="welcome-orbit orbit-one"></div><div class="welcome-orbit orbit-two"></div>
+  <div class="welcome-content">
+    <div class="welcome-brand"><span>CYCLELOG</span></div>
+    <div class="welcome-illustration" aria-hidden="true"><span class="welcome-sun"></span><span class="welcome-scenery"></span><span class="welcome-road"></span><span class="welcome-rider">🚴‍♂️</span><span class="welcome-wind"></span></div>
+    <p class="welcome-eyebrow">YOUR RIDE. YOUR PROGRESS.</p>
+    <h1>Every ride<br>moves you forward.</h1>
+    <p class="welcome-copy">Track your indoor cycling readings, celebrate consistency, and see your progress over time.</p>
+    <div class="welcome-features"><span>✓ Simple ride logging</span><span>✓ Private on this device</span><span>✓ Works offline</span></div>
+    <button class="btn welcome-start" id="getStarted">Let’s Go! <span aria-hidden="true">→</span></button>
+  </div>
+</div>
+
+<main class="app">
+<header class="top"><div class="topline"><div class="brand">CycleLog</div><div class="pill">Personal tracker</div></div><h1>Every ride counts.</h1><p class="top-tagline">A thousand-mile journey starts with a single step.</p></header>
+<nav class="nav" aria-label="Main navigation"><button class="active" data-tab="log"><span class="nav-icon" aria-hidden="true">▣</span><span>Log Ride</span></button><button data-tab="dashboard"><span class="nav-icon" aria-hidden="true">▥</span><span>Dashboard</span></button><button data-tab="history"><span class="nav-icon" aria-hidden="true">↺</span><span>History</span></button><button data-tab="settings"><span class="nav-icon" aria-hidden="true">⚙</span><span>Settings</span></button></nav>
 <section id="log" class="section log-view active">
 <h2 class="section-title log-form-title">Log your efforts</h2>
 <div class="card log-form-card"><div class="dateweight"><div class="field"><label for="rideDate">Date</label><input id="rideDate" type="date"><div class="help">Keep the same day for multiple rides on the same day.</div></div><div class="field weight-field"><div class="weight-label"><label for="weight">Body weight</label><span class="optional-tag">OPTIONAL</span></div><input id="weight" inputmode="decimal" placeholder="e.g. 72.8"><div class="help">Enter weight once a day when measured.</div></div></div>
-<div class="field ride-time-field"><label>Ride Time</label><div class="time-panels"><div class="time-panel saved-panel"><div class="time-panel-head"><span class="time-status-dot saved-dot"></span><span>START READING</span><em>Last saved · editable</em></div><div class="time-selects" aria-label="Start time selectors"><div class="time-part"><select id="startTimeHours" aria-label="Start hours"></select><span>hr</span></div><div class="time-colon">:</div><div class="time-part"><select id="startTimeMinutes" aria-label="Start minutes"></select><span>min</span></div><div class="time-colon">:</div><div class="time-part"><select id="startTimeSeconds" aria-label="Start seconds"></select><span>sec</span></div></div><input id="startTimeDisplay" type="hidden" value="00:00:00"></div><div class="time-panel current-panel"><div class="time-panel-head"><span class="time-status-dot current-dot"></span><span>END READING</span><em>Current meter</em></div><div class="time-selects" aria-label="End time selectors"><div class="time-part"><select id="endTimeHours" aria-label="End hours"></select><span>hr</span></div><div class="time-colon">:</div><div class="time-part"><select id="endTimeMinutes" aria-label="End minutes"></select><span>min</span></div><div class="time-colon">:</div><div class="time-part"><select id="endTimeSeconds" aria-label="End seconds"></select><span>sec</span></div></div><input id="timeReading" type="hidden" value="00:00:00"></div></div></div>
-<div class="field"><label>Distance covered (km)</label><div class="twocol"><div><label class="sub-label" for="startDistance">Start distance · last saved</label><input id="startDistance" class="start-reading" inputmode="decimal" aria-label="Editable start distance reading"></div><div><label class="sub-label" for="distance">End distance · enter reading</label><input id="distance" inputmode="decimal" placeholder="e.g. 28.00"></div></div></div>
-<div class="field"><label>Calories (cal)</label><div class="twocol"><div><label class="sub-label" for="startCalories">Start calories · last saved</label><input id="startCalories" class="start-reading" inputmode="decimal" aria-label="Editable start calories reading"></div><div><label class="sub-label" for="calories">End calories · enter reading</label><input id="calories" inputmode="decimal" placeholder="e.g. 450.0"></div></div></div>
-<div class="calc"><div class="calc-title">CHANGE BETWEEN START AND END READINGS</div><div class="calcgrid"><div><span>Ride time</span><strong id="deltaTime">—</strong></div><div><span>Distance covered</span><strong id="deltaDistance">—</strong></div><div><span>Calories</span><strong id="deltaCalories">—</strong></div></div></div>
-<button class="btn" id="save">Save reading</button><p class="mini">Keep the same date for repeat rides; select a new date when logging another day. Your cumulative meter readings continue across dates.</p></div></section>
+<div class="field ride-time-field"><label>Ride Time</label><div class="time-panels"><div class="time-panel saved-panel"><div class="time-panel-head"><span class="time-status-dot saved-dot"></span><span>SESSION STARTS AT</span><em id="startTimeStatus">Not saved yet</em></div><div class="time-selects" aria-label="Start time selectors"><div class="time-part"><select id="startTimeHours" aria-label="Start hours"></select><span>hr</span></div><div class="time-colon">:</div><div class="time-part"><select id="startTimeMinutes" aria-label="Start minutes"></select><span>min</span></div><div class="time-colon">:</div><div class="time-part"><select id="startTimeSeconds" aria-label="Start seconds"></select><span>sec</span></div></div><input id="startTimeDisplay" type="hidden" value="00:00:00"></div><div class="time-panel current-panel"><div class="time-panel-head"><span class="time-status-dot current-dot"></span><span>SESSION ENDS AT</span><em>Current meter</em></div><div class="time-selects" aria-label="End time selectors"><div class="time-part"><select id="endTimeHours" aria-label="End hours"></select><span>hr</span></div><div class="time-colon">:</div><div class="time-part"><select id="endTimeMinutes" aria-label="End minutes"></select><span>min</span></div><div class="time-colon">:</div><div class="time-part"><select id="endTimeSeconds" aria-label="End seconds"></select><span>sec</span></div></div><input id="timeReading" type="hidden" value="00:00:00"></div></div></div>
+<div class="field"><div class="twocol"><div><label class="sub-label" for="startDistance">Odometer distance (start), km</label><input id="startDistance" class="start-reading" inputmode="decimal" aria-label="Start odometer distance reading"></div><div><label class="sub-label" for="distance">Odometer distance (end), km</label><input id="distance" inputmode="decimal" placeholder="e.g. 28.00" aria-label="End odometer distance reading"></div></div></div>
+<div class="field"><div class="twocol"><div><label class="sub-label" for="startCalories">Calories on meter (start), cal</label><input id="startCalories" class="start-reading" inputmode="decimal" aria-label="Start cumulative calories reading"></div><div><label class="sub-label" for="calories">Calories on meter (end), cal</label><input id="calories" inputmode="decimal" placeholder="e.g. 450.0" aria-label="End cumulative calories reading"></div></div></div>
+<div class="calc"><div class="calc-title">LIVE RIDE SUMMARY</div><div class="calcgrid"><div><span>Ride Time</span><strong id="deltaTime">—</strong></div><div><span>Distance Covered</span><strong id="deltaDistance">—</strong></div><div><span>Calories burnt</span><strong id="deltaCalories">—</strong></div></div></div>
+<div class="field"><button class="btn secondary" id="saveStart">Save Start Readings</button><p class="help" id="pendingHelp">Save your starting meter readings before you begin. They will remain available when you return.</p></div><div class="field"><button class="btn secondary" id="toggleLock" aria-pressed="false">Lock Start Readings</button></div><button class="btn" id="save">Save Ride</button><p class="mini">Start readings are saved separately from ride history. Save Ride adds one completed ride and keeps all previous rides unchanged.</p></div></section>
 <section id="dashboard" class="section dashboard-view">
 <h2 class="section-title">Your progress</h2><p class="sub">Every effort adds up. Here is your cycling snapshot.</p>
-<div class="dash-hero"><div class="dash-hero-top"><div><div class="dash-eyebrow">YOUR CYCLING JOURNEY</div><div class="dash-hero-title">Small rides.<br>Real progress.</div></div><div class="dash-bike" aria-hidden="true">🚴</div></div><div class="dash-hero-bottom"><div><span>Target weight</span><strong>69.00 kg</strong></div><div class="dash-hero-rule"></div><div><span>Latest weight</span><strong id="heroWeight">—</strong></div></div></div>
+<div class="dash-hero"><div class="dash-hero-top"><div><div class="dash-eyebrow">YOUR CYCLING JOURNEY</div><div class="dash-hero-title">Small rides.<br>Real progress.</div></div><div class="dash-bike" aria-hidden="true">🚴</div></div><div class="dash-hero-bottom"><div><span>Target weight</span><strong id="heroTarget">69.00 kg</strong></div><div class="dash-hero-rule"></div><div><span>Latest weight</span><strong id="heroWeight">—</strong></div></div></div>
 <div class="dash-section-head"><h3>Activity totals</h3><span class="smalltag">All saved days</span></div>
-<div class="dash-metrics"><div class="dash-metric dash-time"><div class="dash-metric-icon">◷</div><div class="label">Cycling time</div><strong id="totalTime">0:00</strong><small>elapsed time (minutes:seconds)</small></div><div class="dash-metric dash-distance"><div class="dash-metric-icon">↗</div><div class="label">Distance covered</div><strong id="totalDistance">0.000 km</strong><small>total distance</small></div><div class="dash-metric dash-calories"><div class="dash-metric-icon">✦</div><div class="label">Calories</div><strong id="totalKcal">0.0 cal</strong><small>meter calorie readings</small></div><div class="dash-metric dash-weight"><div class="dash-metric-icon">♡</div><div class="label">Latest weight</div><strong id="latestWeight">—</strong><small id="weightSub">latest recorded value</small></div></div>
-<div class="goal-prediction-grid"><div class="card goal-card"><div class="cardhead"><div><div class="dash-eyebrow dark">YOUR GOAL</div><h3>Weight progress</h3></div><span class="goal-chip" id="goalPercent">—</span></div><div class="goal-numbers"><div><span>Current weight</span><strong id="goalCurrent">—</strong></div><div class="goal-target"><span>Target weight</span><strong id="goalTargetLabel">69.00 kg</strong></div></div><div class="goalbar"><div id="goalFill"></div></div><div class="help" id="goalText">3.80 kg remaining to target based on latest recorded weight.</div></div><div class="card prediction-card"><div class="cardhead"><div><div class="dash-eyebrow dark">YOUR NEXT MILESTONE</div><h3>Prediction</h3></div><span class="prediction-icon" aria-hidden="true">✦</span></div><p class="prediction-intro" id="predictionIntro">Based on your recorded cycling pace.</p><div class="prediction-stats"><div class="prediction-stat"><span>Estimated cycling time</span><strong id="predictionTime">—</strong></div><div class="prediction-stat"><span>Estimated distance</span><strong id="predictionDistance">—</strong></div><div class="prediction-stat"><span>Estimated calories</span><strong id="predictionCalories">—</strong></div></div><div class="prediction-note" id="predictionNote">A rough planning estimate only. Spread activity over time and don’t try to burn this in one ride.</div></div></div>
+<div class="dash-metrics"><div class="dash-metric dash-time"><div class="dash-metric-icon">◷</div><div class="label">Cycling time</div><strong id="totalTime">0:00</strong><small>total time · hours shown when needed</small></div><div class="dash-metric dash-distance"><div class="dash-metric-icon">↗</div><div class="label">Distance covered</div><strong id="totalDistance">0.000 km</strong><small>total distance</small></div><div class="dash-metric dash-calories"><div class="dash-metric-icon">✦</div><div class="label">Calories</div><strong id="totalKcal">0.0 cal</strong><small>meter calorie readings</small></div><div class="dash-metric dash-weight"><div class="dash-metric-icon">♡</div><div class="label">Latest weight</div><strong id="latestWeight">—</strong><small id="weightSub">latest recorded value</small></div></div>
+<div class="goal-prediction-grid"><div class="card goal-card"><div class="cardhead"><div><div class="dash-eyebrow dark">YOUR GOAL</div><h3>Weight progress</h3></div><span class="goal-chip" id="goalPercent">—</span></div><div class="goal-numbers"><div><span>Current weight</span><strong id="goalCurrent">—</strong></div><div class="goal-target"><span>Target weight</span><strong id="goalTargetLabel">69.00 kg</strong></div></div><div class="goalbar" aria-label="Weight-loss progress">
+<div id="goalFill"></div>
+<span id="goalCyclist" class="goal-cyclist" role="img" aria-label="Male cyclist showing weight progress">🚴‍♂️</span>
+</div><div class="help" id="goalText">3.80 kg remaining to target based on latest recorded weight.</div></div><div class="card prediction-card"><div class="cardhead"><div><div class="dash-eyebrow dark">YOUR NEXT MILESTONE</div><h3>Prediction</h3></div><span class="prediction-icon" aria-hidden="true">✦</span></div><p class="prediction-intro" id="predictionIntro">Based on your recorded cycling pace.</p><div class="prediction-stats"><div class="prediction-stat"><span>Estimated cycling time</span><strong id="predictionTime">—</strong></div><div class="prediction-stat"><span>Estimated distance</span><strong id="predictionDistance">—</strong></div><div class="prediction-stat"><span>Estimated calories</span><strong id="predictionCalories">—</strong></div></div><div class="prediction-note" id="predictionNote">A rough planning estimate only. Spread activity over time and don’t try to burn this in one ride.</div></div></div>
+
+<div class="card insights-card" id="insightsPanel">
+  <div class="cardhead"><div><h3>Progress insights</h3><p class="sub compact-sub">A clearer view of your consistency</p></div>
+    <div class="insight-tabs" role="group" aria-label="Chart period"><button type="button" class="insight-tab active" data-period="week">7 days</button><button type="button" class="insight-tab" data-period="month">30 days</button></div>
+  </div>
+  <div class="chart-legend"><span class="legend-dot"></span><span id="chartMetricLabel">Distance per day · km</span></div>
+  <div id="progressChart" class="progress-chart" role="img" aria-label="Cycling distance over the last seven days"></div>
+  <div class="chart-foot" id="chartFoot">Your saved rides will appear here.</div>
+  <div class="chart-metric-switch" role="group" aria-label="Chart metric"><button type="button" class="metric-tab active" data-metric="distance">Distance</button><button type="button" class="metric-tab" data-metric="time">Time</button><button type="button" class="metric-tab" data-metric="calories">Calories</button></div>
+</div>
+<div class="card records-card">
+  <div class="cardhead"><div><h3>Personal records</h3><p class="sub compact-sub">Milestones from your saved rides</p></div><span class="record-medal">✦</span></div>
+  <div class="records-grid">
+    <div class="record-item"><span>Longest ride</span><strong id="recordLongestRide">—</strong><small id="recordLongestRideSub">No rides yet</small></div>
+    <div class="record-item"><span>Most distance in a day</span><strong id="recordBestDay">—</strong><small id="recordBestDaySub">No rides yet</small></div>
+    <div class="record-item"><span>Longest ride time</span><strong id="recordLongestTime">—</strong><small id="recordLongestTimeSub">No rides yet</small></div>
+  </div>
+</div>
+<div class="card distance-goal-card">
+  <div class="cardhead"><div><h3>Weekly distance goal</h3><p class="sub compact-sub">Progress based on this calendar week</p></div><span class="goal-chip" id="weeklyGoalLabel">50 km</span></div>
+  <div class="weekly-goal-track"><div id="weeklyGoalFill"></div></div>
+  <div class="weekly-goal-meta"><strong id="weeklyGoalProgress">0.000 km</strong><span id="weeklyGoalRemaining">50.000 km to go</span></div>
+  <p class="help">Set your goal in Settings. This is a personal target, not a medical recommendation.</p>
+</div>
+
 <div class="card daily-card"><div class="cardhead"><div><div class="dash-eyebrow dark">YOUR CONSISTENCY</div><h3>Recent daily activity</h3></div><span class="daily-mark">Recent days</span></div><div id="dailySummary"></div></div>
 </section>
-<section id="history" class="section"><h2 class="section-title">Reading history</h2><p class="sub">Every saved meter reading, in order.</p><div class="card"><div id="historyList"></div></div><div class="card"><div class="cardhead"><h3>Export data</h3></div><p class="sub">Download a CSV file that opens in Excel. This does not update the original Google Drive workbook.</p><button class="btn secondary" id="export">Export CSV</button></div></section>
-<section id="settings" class="section"><h2 class="section-title">Settings & data</h2><p class="sub">Local settings. No cloud account or Drive connection is required.</p><div class="card"><h3 style="margin-top:0">Meter baseline</h3><p class="sub">A new installation starts at zero. Enter your current cumulative meter readings here before logging your next ride.</p><div class="field"><label>Meter time baseline</label><div class="duration"><select id="setTimeHours" aria-label="Baseline hours"><option value="">Hours</option></select><select id="setTimeMinutes" aria-label="Baseline minutes"><option value="">Minutes</option></select><select id="setTimeSeconds" aria-label="Baseline seconds"><option value="">Seconds</option></select></div></div><div class="twocol"><div class="field"><label for="setDistance">Distance (km)</label><input id="setDistance" value="0" inputmode="decimal"></div><div class="field"><label for="setCalories">Calories (cal)</label><input id="setCalories" value="0" inputmode="decimal"></div></div><div class="field"><label for="setTarget">Target weight (kg)</label><input id="setTarget" value="69" inputmode="decimal"></div><button class="btn" id="saveSettings">Save settings</button></div><div class="card"><h3 style="margin-top:0">Backup & reset</h3><p class="sub">Export your data before resetting. Reset clears this browser's saved prototype records.</p><button class="btn secondary" id="backup">Download backup JSON</button><div style="height:9px"></div><button class="btn danger" id="reset">Reset prototype data</button></div></section>
-<div class="footer">CycleLog · Saved in this browser · No cloud sync</div></main><div class="toast" id="toast"></div>
+<section id="history" class="section">
+<h2 class="section-title">Ride history</h2>
+<p class="sub">Review saved rides, compare meter readings, and narrow the list by date.</p>
+<div class="card history-tools">
+  <div class="history-filter-grid">
+    <div class="field"><label for="historyFrom">From date</label><input id="historyFrom" type="date"></div>
+    <div class="field"><label for="historyTo">To date</label><input id="historyTo" type="date"></div>
+  </div>
+  <div class="field"><label for="historyActivityFilter">Activity filter</label><select id="historyActivityFilter" class="full-select"><option value="all">All rides</option><option value="distance5">Distance 5 km or more</option><option value="distance10">Distance 10 km or more</option><option value="time30">Ride time 30 minutes or more</option></select></div>
+  <div class="field"><label for="historySort">Sort rides</label><select id="historySort"><option value="newest">Newest first</option><option value="oldest">Oldest first</option></select></div>
+  <div class="history-filter-actions"><button class="btn secondary" id="clearHistoryFilters" type="button">Clear filters</button></div>
+  <p class="help" id="historyFilterHelp">Showing all saved rides.</p>
+</div>
+<div class="card"><div class="cardhead"><h3>Saved rides</h3><span class="smalltag" id="historyCount">0 rides</span></div><div id="historyTotals" class="history-totals"></div><div id="historyList"></div></div>
+<div class="card"><div class="cardhead"><h3>Export data</h3></div><p class="sub">Download all saved rides as a CSV file that opens in Excel. Date filters do not limit the export.</p><button class="btn secondary" id="export">Export all rides (CSV)</button></div>
+</section>
+<section id="settings" class="section"><h2 class="section-title">Settings & data</h2><p class="sub">Local settings. No cloud account or Drive connection is required.</p><div class="card theme-setting-card"><div class="cardhead"><h3>Appearance</h3><span class="smalltag">Personal preference</span></div><div class="theme-setting-row"><div class="theme-copy"><strong>Dark mode</strong><p class="sub">Use a darker, low-glare theme across CycleLog.</p></div><label class="theme-switch" for="darkModeToggle"><input type="checkbox" id="darkModeToggle" aria-label="Enable dark mode"><span class="theme-switch-track"><span class="theme-switch-knob"></span></span></label></div><p class="help" id="themeStatus">Light mode is enabled.</p></div><div class="card"><h3 style="margin-top:0">Meter baseline</h3><p class="sub">A new installation starts at zero. Enter your current cumulative meter readings here before logging your next ride.</p><div class="field"><label>Meter time baseline</label><div class="duration"><select id="setTimeHours" aria-label="Baseline hours"><option value="">Hours</option></select><select id="setTimeMinutes" aria-label="Baseline minutes"><option value="">Minutes</option></select><select id="setTimeSeconds" aria-label="Baseline seconds"><option value="">Seconds</option></select></div></div><div class="twocol"><div class="field"><label for="setDistance">Distance (km)</label><input id="setDistance" value="0" inputmode="decimal"></div><div class="field"><label for="setCalories">Calories (cal)</label><input id="setCalories" value="0" inputmode="decimal"></div></div><div class="field"><label for="setTarget">Target weight (kg)</label><input id="setTarget" value="69" inputmode="decimal"></div><div class="field"><label for="setWeeklyDistanceGoal">Weekly distance goal (km)</label><input id="setWeeklyDistanceGoal" value="50" inputmode="decimal" min="0.1" type="number"><p class="help">Used by the Dashboard weekly goal card.</p></div><button class="btn" id="saveSettings">Save settings</button></div><div class="card"><h3 style="margin-top:0">Backup & reset</h3><p class="sub">Export your data before resetting. Reset clears this browser's saved prototype records.</p><button class="btn secondary" id="backup">Download backup JSON</button><div style="height:9px"></div><button class="btn danger" id="reset">Reset data</button></div></section>
+<div class="footer">CycleLog · Saved in this browser · No cloud sync · Dashboard totals update from saved rides</div></main>
+<div class="reset-overlay" id="resetConfirm" hidden role="dialog" aria-modal="true" aria-labelledby="resetTitle">
+  <div class="reset-dialog">
+    <div class="reset-warning-icon" aria-hidden="true">!</div>
+    <h2 id="resetTitle">Warning!</h2>
+    <p>Do you want to reset the data?</p>
+    <p class="reset-advice">It’s advisable to download a backup first using <strong>Download backup JSON</strong>.</p>
+    <div class="reset-actions">
+      <button type="button" class="btn danger" id="confirmReset">Reset</button>
+      <button type="button" class="btn secondary" id="cancelReset">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
 <script>
-const KEY='cyclelog-v2';
-const initial={baseline:{time:0,distance:0,calories:0,cadence:null},target:69,latestWeight:null,startingWeight:null,history:[],daily:[],lastDate:''};
-let state=load();function load(){try{const s=JSON.parse(localStorage.getItem(KEY));return s||structuredClone(initial)}catch(e){return JSON.parse(JSON.stringify(initial))}}function persist(){const serialized=JSON.stringify(state);localStorage.setItem(KEY,serialized);const check=localStorage.getItem(KEY);if(check!==serialized)throw new Error('Saved data could not be verified in browser storage.');render()}function toast(t){const el=document.getElementById('toast');el.textContent=t;el.style.display='block';setTimeout(()=>el.style.display='none',2600)}function num(id){const v=document.getElementById(id).value.trim();if(!v)return null;const n=Number(v);return Number.isFinite(n)?n:null}function parseClock(id){const v=document.getElementById(id).value.trim();const match=v.match(/^(\d{1,3}):([0-5]?\d):([0-5]?\d)$/);if(!match)return null;const h=Number(match[1]),m=Number(match[2]),sec=Number(match[3]);if(![h,m,sec].every(Number.isFinite)||h<0||m>59||sec>59)return null;return h*3600+m*60+sec}function parseTime(){return parseDuration('endTime')}function parseDuration(prefix){const h=Number(document.getElementById(prefix+'Hours').value),m=Number(document.getElementById(prefix+'Minutes').value),sec=Number(document.getElementById(prefix+'Seconds').value);return [h,m,sec].every(Number.isFinite)&&h>=0&&m>=0&&m<60&&sec>=0&&sec<60?h*3600+m*60+sec:null}function parseTimeSettings(){return parseDuration('setTime')}function syncDuration(prefix,hiddenId){const total=parseDuration(prefix);document.getElementById(hiddenId).value=total===null?'':formatClock(total);updatePreview()}function fillDuration(prefix,total){total=Math.max(0,Math.round(total||0));const h=Math.floor(total/3600),m=Math.floor(total%3600/60),sec=total%60;document.getElementById(prefix+'Hours').value=String(h);document.getElementById(prefix+'Minutes').value=String(m);document.getElementById(prefix+'Seconds').value=String(sec)}function setupDuration(prefix,maxHours=99){const h=document.getElementById(prefix+'Hours'),m=document.getElementById(prefix+'Minutes'),sec=document.getElementById(prefix+'Seconds');for(let i=0;i<=maxHours;i++)h.add(new Option(i+' h',String(i)));for(let i=0;i<60;i++){m.add(new Option(String(i).padStart(2,'0')+' min',String(i)));sec.add(new Option(String(i).padStart(2,'0')+' sec',String(i)))}h.options[0].text='Hours';m.options[0].text='Minutes';sec.options[0].text='Seconds';}function formatTime(sec){sec=Math.max(0,Math.round(sec||0));let h=Math.floor(sec/3600),m=Math.floor(sec%3600/60),s=sec%60;return h?`${h}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`:`${m}:${String(s).padStart(2,'0')}`}function formatClock(sec){sec=Math.max(0,Math.round(sec||0));const h=Math.floor(sec/3600),m=Math.floor(sec%3600/60),s=sec%60;return `${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`}function localDateISO(){const n=new Date();const y=n.getFullYear(),m=String(n.getMonth()+1).padStart(2,'0'),d=String(n.getDate()).padStart(2,'0');return `${y}-${m}-${d}`}function prettyDate(d){if(!d)return '';return new Date(d+'T12:00:00').toLocaleDateString('en-IN',{day:'2-digit',month:'short',year:'numeric'})}function latest(){return state.history.length?state.history[state.history.length-1].reading:state.baseline}function refreshStartFields(){const p=latest();fillDuration('startTime',p.time);document.getElementById('startTimeDisplay').value=formatClock(p.time);document.getElementById('startDistance').value=Number(p.distance||0).toFixed(3);document.getElementById('startCalories').value=Number(p.calories||0).toFixed(1)}function updatePreview(){const startT=parseDuration('startTime'),startD=num('startDistance'),startC=num('startCalories'),t=parseTime(),d=num('distance'),c=num('calories');document.getElementById('deltaTime').textContent=t===null||startT===null?'—':t<startT?'Check reading':formatTime(t-startT);document.getElementById('deltaDistance').textContent=d===null||startD===null?'—':d<startD?'Check reading':(d-startD).toFixed(3)+' km';document.getElementById('deltaCalories').textContent=c===null||startC===null?'—':c<startC?'Check reading':(c-startC).toFixed(1)+' cal'}function saveRide(){const date=document.getElementById('rideDate').value,t=parseTime(),d=num('distance'),c=num('calories'),w=num('weight'),startT=parseDuration('startTime'),startD=num('startDistance'),startC=num('startCalories');if(!date||t===null||d===null||c===null||startT===null||startD===null||startC===null){toast('Enter valid start and end readings for time, distance and calories.');return}if(startT<0||startD<0||startC<0){toast('Start readings cannot be negative.');return}if(d<startD||c<startC||t<startT){toast('An end reading is lower than its start value. Check the readings.');return}if(w!==null&&w<=0){toast('Enter a valid weight.');return}const delta={time:t-startT,distance:d-startD,calories:c-startC};if(delta.time===0&&delta.distance===0&&delta.calories===0&&w===null){toast('No change or optional value entered.');return}const item={id:Date.now(),date,reading:{time:t,distance:d,calories:c},start:{time:startT,distance:startD,calories:startC},delta,weight:w,createdAt:new Date().toISOString()};state.history.push(item);state.lastDate=date;if(w!==null){if(state.latestWeight==null)state.startingWeight=w;state.latestWeight=w;}try{persist()}catch(err){state.history.pop();state.latestWeight=state.history.slice().reverse().find(x=>x.weight!=null)?.weight??null;state.startingWeight=state.latestWeight;refreshStartFields();render();toast('Could not save data in this browser. Check Chrome site settings/storage, then retry.');return}refreshStartFields();fillDuration('endTime',latest().time);document.getElementById('timeReading').value=formatClock(latest().time);document.getElementById('distance').value='';document.getElementById('calories').value='';document.getElementById('weight').value='';document.getElementById('rideDate').value=date;updatePreview();toast('Activity saved. Totals updated.')}function allDaily(){const map={};for(const r of state.daily){if(!map[r.date])map[r.date]={date:r.date,time:0,distance:0,calories:0,weight:null};map[r.date].time+=r.time||0;map[r.date].distance+=r.distance||0;map[r.date].calories+=r.calories||0;if(r.weight!=null)map[r.date].weight=r.weight}for(const h of state.history){if(!map[h.date])map[h.date]={date:h.date,time:0,distance:0,calories:0,weight:null};map[h.date].time+=h.delta.time;map[h.date].distance+=h.delta.distance;map[h.date].calories+=h.delta.calories;if(h.weight!=null)map[h.date].weight=h.weight}return Object.values(map).sort((a,b)=>a.date.localeCompare(b.date))}function render(){const base=latest(),days=allDaily();const totalTime=days.reduce((a,x)=>a+x.time,0),totalDist=days.reduce((a,x)=>a+x.distance,0),totalCal=days.reduce((a,x)=>a+x.calories,0);document.getElementById('totalTime').textContent=formatTime(totalTime);document.getElementById('totalDistance').textContent=totalDist.toFixed(3)+' km';document.getElementById('totalKcal').textContent=totalCal.toFixed(1)+' cal';document.getElementById('latestWeight').textContent=state.latestWeight==null?'—':Number(state.latestWeight).toFixed(2)+' kg';document.getElementById('heroWeight').textContent=state.latestWeight==null?'—':Number(state.latestWeight).toFixed(2)+' kg';let remain=state.latestWeight==null?null:Math.max(0,state.latestWeight-state.target);document.getElementById('goalCurrent').textContent=state.latestWeight==null?'—':Number(state.latestWeight).toFixed(2)+' kg';document.getElementById('goalPercent').textContent=remain===null?'No weight':remain===0?'Target reached':remain.toFixed(2)+' kg to go';let start=state.startingWeight??state.latestWeight??state.target,progress=state.latestWeight==null||start===state.target?0:Math.min(100,Math.max(0,(start-state.latestWeight)/(start-state.target)*100));document.getElementById('goalFill').style.width=progress+'%';document.getElementById('goalText').textContent=remain===null?'Add a body-weight reading to track progress.':remain===0?'You have reached your target weight.':remain.toFixed(2)+' kg remaining to target based on latest recorded weight.';document.getElementById('goalTargetLabel').textContent=Number(state.target).toFixed(2)+' kg';const predTime=document.getElementById('predictionTime'),predDistance=document.getElementById('predictionDistance'),predCalories=document.getElementById('predictionCalories'),predIntro=document.getElementById('predictionIntro'),predNote=document.getElementById('predictionNote');const totalMinutes=totalTime/60,weightGap=state.latestWeight==null?null:Math.max(0,state.latestWeight-state.target),calPerMinute=totalMinutes>0?totalCal/totalMinutes:0,calPerKm=totalDist>0?totalCal/totalDist:0;if(weightGap===null||weightGap===0){predTime.textContent='—';predDistance.textContent='—';predCalories.textContent='—';predIntro.textContent=weightGap===0?'Target reached — keep building a sustainable routine.':'Add a body-weight reading to estimate your next milestone.';predNote.textContent='This is a rough planning estimate, not a promise. Body weight is also affected by nutrition, hydration and other factors.'}else if(totalMinutes<1||totalCal<=0||totalDist<=0){predTime.textContent='—';predDistance.textContent='—';predCalories.textContent='—';predIntro.textContent='Log a few rides to establish your personal average.';predNote.textContent='Predictions will appear once there is enough cycling data. Increase activity gradually and do not chase a calorie target in one ride.'}else{const energyEquivalent=weightGap*7700;const estimateMinutes=energyEquivalent/calPerMinute;const estimateDistance=energyEquivalent/calPerKm;predTime.textContent=formatTime(Math.round(estimateMinutes*60));predDistance.textContent=estimateDistance.toLocaleString('en-IN',{maximumFractionDigits:0})+' km';predCalories.textContent=Math.round(energyEquivalent).toLocaleString('en-IN')+' cal';predIntro.textContent=`About ${weightGap.toFixed(2)} kg to your target, estimated from your logged cycling averages.`;predNote.textContent=`A rough estimate using the common ~7,700 kcal-per-kg rule of thumb and your logged average (${calPerMinute.toFixed(1)} meter-calorie units/min). This assumes your bike's displayed ‘cal’ means the usual fitness-machine Calories (kcal equivalent); saved readings are not converted. Weight change also depends on food intake and other factors. Spread activity over weeks and increase gradually—don’t chase this in one ride.`}document.getElementById('dailySummary').innerHTML=days.slice().reverse().slice(0,8).map(x=>`<div class="historyrow"><div><strong>${prettyDate(x.date)}</strong><div class="meta">${formatTime(x.time)} · ${x.distance.toFixed(3)} km</div></div><div class="value">${x.calories.toFixed(1)} cal</div></div>`).join('')||'<div class="empty">No daily data yet.</div>';const entries=state.history.slice().reverse();document.getElementById('historyList').innerHTML=entries.length?entries.map(h=>`<div class="historyrow"><div><strong>${prettyDate(h.date)} · ${formatTime(h.delta.time)}</strong><div class="meta">Meter reading: ${formatTime(h.reading.time)} · ${h.reading.distance.toFixed(3)} km · ${h.reading.calories.toFixed(1)} cal</div>${h.weight!=null?`<div class="meta">Weight recorded: ${Number(h.weight).toFixed(2)} kg</div>`:''}</div><div class="value">+${h.delta.distance.toFixed(3)} km<br><span class="mini">+${h.delta.calories.toFixed(1)} cal</span></div></div>`).join(''):'<div class="empty">No readings saved yet. Add your first reading to begin your history.</div>'}function csvEscape(v){return '"'+String(v??'').replaceAll('"','""')+'"'}function exportCsv(){const rows=[['Date','Start time','End time','Time increment','Start distance (km)','End distance (km)','Distance increment (km)','Start calories (cal)','End calories (cal)','Calories increment (cal)','Weight (kg)']];for(const h of state.history)rows.push([h.date,formatTime(h.start?.time??(h.reading.time-h.delta.time)),formatTime(h.reading.time),formatTime(h.delta.time),h.start?.distance??(h.reading.distance-h.delta.distance),h.reading.distance,h.delta.distance,h.start?.calories??(h.reading.calories-h.delta.calories),h.reading.calories,h.delta.calories,h.weight??'']);const csv='\ufeff'+rows.map(r=>r.map(csvEscape).join(',')).join('\r\n');download(new Blob([csv],{type:'text/csv;charset=utf-8;'}),'cyclelog-readings.csv')}function download(blob,name){const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)}document.querySelectorAll('[data-tab]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-tab]').forEach(x=>x.classList.toggle('active',x===b));document.querySelectorAll('.section').forEach(x=>x.classList.toggle('active',x.id===b.dataset.tab));if(b.dataset.tab==='log')updatePreview()}));['startDistance','startCalories','distance','calories'].forEach(id=>document.getElementById(id).addEventListener('input',updatePreview));['startDistance','startCalories','distance','calories'].forEach(id=>document.getElementById(id).addEventListener('change',updatePreview));['startTime','endTime'].forEach(prefix=>['Hours','Minutes','Seconds'].forEach(part=>document.getElementById(prefix+part).addEventListener('change',()=>syncDuration(prefix,prefix==='startTime'?'startTimeDisplay':'timeReading'))));document.getElementById('save').addEventListener('click',saveRide);document.getElementById('export').addEventListener('click',exportCsv);document.getElementById('saveSettings').addEventListener('click',()=>{const t=parseTimeSettings(),d=num('setDistance'),c=num('setCalories'),g=num('setTarget');if(t===null||d===null||c===null||g===null||d<0||c<0||g<=0){toast('Check the settings values.');return}state.baseline={...state.baseline,time:t,distance:d,calories:c};state.target=g;refreshStartFields();persist();updatePreview();toast('Settings saved. Existing readings were preserved.')});document.getElementById('backup').addEventListener('click',()=>download(new Blob([JSON.stringify(state,null,2)],{type:'application/json'}),'cyclelog-backup.json'));document.getElementById('reset').addEventListener('click',()=>{if(confirm('Reset all saved prototype records in this browser? Download a backup first if you need them.')){localStorage.removeItem(KEY);state=JSON.parse(JSON.stringify(initial));persist();toast('Prototype data reset.')}});setupDuration('setTime');setupDuration('startTime',999);setupDuration('endTime',999);refreshStartFields();fillDuration('endTime',latest().time);document.getElementById('timeReading').value=formatClock(latest().time);document.getElementById('rideDate').value=localDateISO();fillDuration('setTime',state.baseline.time);document.getElementById('setDistance').value=state.baseline.distance;document.getElementById('setCalories').value=state.baseline.calories;document.getElementById('setTarget').value=state.target;document.querySelectorAll('[data-tab]').forEach(b=>b.classList.toggle('active',b.dataset.tab==='log'));document.querySelectorAll('.section').forEach(section=>section.classList.toggle('active',section.id==='log'));render();updatePreview();if('serviceWorker'in navigator&&location.protocol.startsWith('http'))navigator.serviceWorker.register('./sw.js').catch(()=>{});
+/* CycleLog release v2.9 — clean start for GitHub Pages */
+const KEY='cyclelog-v3';
+
+const THEME_KEY='cyclelog-theme-v1';
+function applyTheme(mode){
+  const dark=mode==='dark';
+  document.body.classList.toggle('dark-mode',dark);
+  document.documentElement.style.colorScheme=dark?'dark':'light';
+  const toggle=document.getElementById('darkModeToggle');
+  if(toggle) toggle.checked=dark;
+  const status=document.getElementById('themeStatus');
+  if(status) status.textContent=dark?'Dark mode is enabled.':'Light mode is enabled.';
+}
+function loadTheme(){
+  let mode='light';
+  try{mode=localStorage.getItem(THEME_KEY)==='dark'?'dark':'light'}catch(e){}
+  applyTheme(mode);
+}
+function setThemeFromToggle(){
+  const mode=document.getElementById('darkModeToggle').checked?'dark':'light';
+  try{localStorage.setItem(THEME_KEY,mode)}catch(e){}
+  applyTheme(mode);
+}
+
+const PENDING_KEY='cyclelog-pending-v2';
+let pending=loadPending();
+function loadPending(){try{const p=JSON.parse(localStorage.getItem(PENDING_KEY));return p&&p.start? p:null}catch(e){return null}}
+function savePendingStore(p){if(p===null){localStorage.removeItem(PENDING_KEY);pending=null;return}const serialized=JSON.stringify(p);localStorage.setItem(PENDING_KEY,serialized);if(localStorage.getItem(PENDING_KEY)!==serialized)throw new Error('Pending start readings could not be verified.');pending=p}
+const initial={baseline:{time:0,distance:0,calories:0,cadence:null},target:69,latestWeight:null,startingWeight:null,history:[],daily:[],lastDate:'',weeklyDistanceGoal:50};
+let state=load();function load(){try{const s=JSON.parse(localStorage.getItem(KEY));if(!s)return JSON.parse(JSON.stringify(initial));return {...JSON.parse(JSON.stringify(initial)),...s,baseline:{...initial.baseline,...(s.baseline||{})},history:Array.isArray(s.history)?s.history:[],daily:Array.isArray(s.daily)?s.daily:[],weeklyDistanceGoal:Number(s.weeklyDistanceGoal)>0?Number(s.weeklyDistanceGoal):50}}catch(e){return JSON.parse(JSON.stringify(initial))}}function persist(){const serialized=JSON.stringify(state);localStorage.setItem(KEY,serialized);const check=localStorage.getItem(KEY);if(check!==serialized)throw new Error('Saved data could not be verified in browser storage.');render()}function toast(t){const el=document.getElementById('toast');el.textContent=t;el.style.display='block';setTimeout(()=>el.style.display='none',2600)}function num(id){const v=document.getElementById(id).value.trim();if(!v)return null;const n=Number(v);return Number.isFinite(n)?n:null}function parseClock(id){const v=document.getElementById(id).value.trim();const match=v.match(/^(\d{1,3}):([0-5]?\d):([0-5]?\d)$/);if(!match)return null;const h=Number(match[1]),m=Number(match[2]),sec=Number(match[3]);if(![h,m,sec].every(Number.isFinite)||h<0||m>59||sec>59)return null;return h*3600+m*60+sec}function parseTime(){return parseDuration('endTime')}function parseDuration(prefix){const h=Number(document.getElementById(prefix+'Hours').value),m=Number(document.getElementById(prefix+'Minutes').value),sec=Number(document.getElementById(prefix+'Seconds').value);return [h,m,sec].every(Number.isFinite)&&h>=0&&m>=0&&m<60&&sec>=0&&sec<60?h*3600+m*60+sec:null}function parseTimeSettings(){return parseDuration('setTime')}function syncDuration(prefix,hiddenId){const total=parseDuration(prefix);document.getElementById(hiddenId).value=total===null?'':formatClock(total);updatePreview()}function fillDuration(prefix,total){total=Math.max(0,Math.round(total||0));const h=Math.floor(total/3600),m=Math.floor(total%3600/60),sec=total%60;document.getElementById(prefix+'Hours').value=String(h);document.getElementById(prefix+'Minutes').value=String(m);document.getElementById(prefix+'Seconds').value=String(sec)}function setupDuration(prefix,maxHours=99){const h=document.getElementById(prefix+'Hours'),m=document.getElementById(prefix+'Minutes'),sec=document.getElementById(prefix+'Seconds');for(let i=0;i<=maxHours;i++)h.add(new Option(i+' h',String(i)));for(let i=0;i<60;i++){m.add(new Option(String(i).padStart(2,'0')+' min',String(i)));sec.add(new Option(String(i).padStart(2,'0')+' sec',String(i)))}h.options[0].text='hr';m.options[0].text='min';sec.options[0].text='sec';}function formatTime(sec){sec=Math.max(0,Math.round(sec||0));let h=Math.floor(sec/3600),m=Math.floor(sec%3600/60),s=sec%60;return h?`${h}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`:`${m}:${String(s).padStart(2,'0')}`}function formatClock(sec){sec=Math.max(0,Math.round(sec||0));const h=Math.floor(sec/3600),m=Math.floor(sec%3600/60),s=sec%60;return `${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`}function localDateISO(){const n=new Date();const y=n.getFullYear(),m=String(n.getMonth()+1).padStart(2,'0'),d=String(n.getDate()).padStart(2,'0');return `${y}-${m}-${d}`}function prettyDate(d){if(!d)return '';return new Date(d+'T12:00:00').toLocaleDateString('en-IN',{day:'2-digit',month:'short',year:'numeric'})}function latest(){return state.history.length?state.history[state.history.length-1].reading:state.baseline}function refreshStartFields(){const p=pending?.start||latest();fillDuration('startTime',p.time);document.getElementById('startTimeDisplay').value=formatClock(p.time);document.getElementById('startDistance').value=Number(p.distance||0).toFixed(3);document.getElementById('startCalories').value=Number(p.calories||0).toFixed(1);applyStartLock();updatePendingStatus()}function readStartFields(){const time=parseDuration('startTime'),distance=num('startDistance'),calories=num('startCalories');if(time===null||distance===null||calories===null||distance<0||calories<0){toast('Enter valid, non-negative start readings first.');return null}return {time,distance,calories}}function updatePendingStatus(){const status=document.getElementById('startTimeStatus'),help=document.getElementById('pendingHelp'),btn=document.getElementById('toggleLock');if(!status||!help||!btn)return;status.textContent=pending?(pending.locked?'Saved · locked':'Saved · editable'):'Not saved yet';help.textContent=pending?'Start readings saved on this device. '+(pending.locked?'Unlock to make corrections.':'You can edit them and save again.'):'Save your starting meter readings before you begin. They will remain available when you return.';btn.textContent=pending?.locked?'Unlock Start Readings':'Lock Start Readings';btn.setAttribute('aria-pressed',pending?.locked?'true':'false')}function applyStartLock(){const locked=!!pending?.locked;['startTimeHours','startTimeMinutes','startTimeSeconds','startDistance','startCalories'].forEach(id=>{const el=document.getElementById(id);if(el)el.disabled=locked});const btn=document.getElementById('saveStart');if(btn)btn.disabled=locked;updatePendingStatus()}function saveStartReadings(){const start=readStartFields();if(!start)return;try{savePendingStore({start,locked:false,savedAt:new Date().toISOString()});applyStartLock();updatePreview();toast('Start readings saved on this device.')}catch(err){toast('Could not save start readings. Check browser storage and retry.')}}function toggleStartLock(){if(!pending){toast('Save Start Readings before locking them.');return}try{pending={...pending,locked:!pending.locked};savePendingStore(pending);applyStartLock();toast(pending.locked?'Start readings locked.':'Start readings unlocked.')}catch(err){toast('Could not update the lock state.')}}function updatePreview(){const startT=parseDuration('startTime'),startD=num('startDistance'),startC=num('startCalories'),t=parseTime(),d=num('distance'),c=num('calories');document.getElementById('deltaTime').textContent=t===null||startT===null?'—':t<startT?'Check reading':formatTime(t-startT);document.getElementById('deltaDistance').textContent=d===null||startD===null?'—':d<startD?'Check reading':(d-startD).toFixed(3)+' km';document.getElementById('deltaCalories').textContent=c===null||startC===null?'—':c<startC?'Check reading':(c-startC).toFixed(1)+' cal'}function saveRide(){
+ const date=document.getElementById('rideDate').value,t=parseTime(),d=num('distance'),c=num('calories'),w=num('weight'),startT=parseDuration('startTime'),startD=num('startDistance'),startC=num('startCalories');
+ if(!pending){toast('Save Start Readings before saving this ride.');return}
+ if(!date||t===null||d===null||c===null||startT===null||startD===null||startC===null){toast('Complete the date and all start/end meter readings.');return}
+ if(!/^\d{4}-\d{2}-\d{2}$/.test(date)||Number.isNaN(new Date(date+'T12:00:00').getTime())){toast('Choose a valid ride date.');return}
+ if(startT<0||startD<0||startC<0||t<0||d<0||c<0){toast('Meter readings cannot be negative.');return}
+ if(pending.start.time!==startT||Math.abs(pending.start.distance-startD)>1e-9||Math.abs(pending.start.calories-startC)>1e-9){toast('Start readings changed. Tap Save Start Readings before saving the ride.');return}
+ if(d<startD||c<startC||t<startT){toast('An end reading is lower than its start value. Check the readings.');return}
+ if(w!==null&&(!Number.isFinite(w)||w<20||w>350)){toast('Weight must be between 20 and 350 kg.');return}
+ const delta={time:t-startT,distance:d-startD,calories:c-startC};
+ if(delta.time===0&&delta.distance===0&&delta.calories===0&&w===null){toast('No change or optional weight entered.');return}
+ const duplicate=state.history.some(h=>h.date===date&&h.start&&h.reading&&Math.abs(h.start.time-startT)<1e-9&&Math.abs(h.start.distance-startD)<1e-9&&Math.abs(h.start.calories-startC)<1e-9&&Math.abs(h.reading.time-t)<1e-9&&Math.abs(h.reading.distance-d)<1e-9&&Math.abs(h.reading.calories-c)<1e-9);
+ if(duplicate){toast('This exact ride already exists in History. No duplicate was saved.');return}
+ const warnings=[];
+ if(delta.time>24*3600)warnings.push('Ride time is over 24 hours');
+ if(delta.distance>500)warnings.push('Distance is over 500 km');
+ if(delta.calories>20000)warnings.push('Calories are over 20,000');
+ // Save directly after validation; unusual values are flagged non-blockingly after persistence succeeds.
+ const item={id:Date.now(),date,reading:{time:t,distance:d,calories:c},start:{time:startT,distance:startD,calories:startC},delta,weight:w,createdAt:new Date().toISOString()};
+ const oldState=JSON.stringify(state);
+ try{
+   state.history=state.history.concat(item);state.lastDate=date;
+   if(w!==null){if(state.latestWeight==null)state.startingWeight=w;state.latestWeight=w;}
+   persist();
+ }catch(err){state=JSON.parse(oldState);render();toast('Could not save data. Your previous saved rides were kept; check browser storage and retry.');return}
+ try{savePendingStore(null)}catch(e){}
+ refreshStartFields();fillDuration('endTime',latest().time);document.getElementById('timeReading').value=formatClock(latest().time);document.getElementById('distance').value='';document.getElementById('calories').value='';document.getElementById('weight').value='';document.getElementById('rideDate').value=date;updatePreview();toast(warnings.length?'Ride saved. Please check: '+warnings.join('; ')+'.':'Ride saved. Previous rides are unchanged.');
+}function allDaily(){const map={};for(const r of state.daily){if(!map[r.date])map[r.date]={date:r.date,time:0,distance:0,calories:0,weight:null};map[r.date].time+=r.time||0;map[r.date].distance+=r.distance||0;map[r.date].calories+=r.calories||0;if(r.weight!=null)map[r.date].weight=r.weight}for(const h of state.history){if(!map[h.date])map[h.date]={date:h.date,time:0,distance:0,calories:0,weight:null};map[h.date].time+=h.delta.time;map[h.date].distance+=h.delta.distance;map[h.date].calories+=h.delta.calories;if(h.weight!=null)map[h.date].weight=h.weight}return Object.values(map).sort((a,b)=>a.date.localeCompare(b.date))}
+let chartPeriod='week',chartMetric='distance';
+function weekStartISO(dateObj){const d=new Date(dateObj.getFullYear(),dateObj.getMonth(),dateObj.getDate());const day=(d.getDay()+6)%7;d.setDate(d.getDate()-day);return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`}
+function dateOffsetISO(offset){const d=new Date();d.setDate(d.getDate()+offset);return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`}
+function renderInsights(days,totalDist){
+ const all=allDaily(),periodDays=chartPeriod==='week'?7:30,cutoff=dateOffsetISO(-(periodDays-1));
+ const selected=[];for(let i=periodDays-1;i>=0;i--){const date=dateOffsetISO(-i),entry=all.find(x=>x.date===date);selected.push({date,time:entry?.time||0,distance:entry?.distance||0,calories:entry?.calories||0})}
+ const key=chartMetric,values=selected.map(x=>x[key]||0),max=Math.max(...values,1);
+ document.getElementById('chartMetricLabel').textContent=(key==='distance'?'Distance per day · km':key==='time'?'Cycling time per day':'Calories per day · cal');
+ document.getElementById('progressChart').style.gridTemplateColumns=`repeat(${periodDays},minmax(0,1fr))`;
+ document.getElementById('progressChart').setAttribute('aria-label',`${key} over the last ${periodDays} days`);
+ document.getElementById('progressChart').innerHTML=selected.map((x,i)=>{const value=values[i],height=value>0?Math.max(5,value/max*100):0;const label=chartPeriod==='week'?new Date(x.date+'T12:00:00').toLocaleDateString('en-IN',{weekday:'short'}).slice(0,2):String(new Date(x.date+'T12:00:00').getDate());const display=key==='time'?formatTime(value):key==='distance'?value.toFixed(1)+' km':value.toFixed(0);return `<div class="chart-column" title="${prettyDate(x.date)} · ${display}"><span class="chart-value">${value?display:'—'}</span><div class="chart-bar-track"><div class="chart-bar" style="height:${height}%"></div></div><span class="chart-day">${label}</span></div>`}).join('');
+ const total=values.reduce((a,b)=>a+b,0);document.getElementById('chartFoot').textContent=total===0?'Your saved rides will appear here as you build a routine.':chartPeriod==='week'?`Last 7 days: ${key==='time'?formatTime(total):key==='distance'?total.toFixed(3)+' km':total.toFixed(1)+' cal'}.`:`Last 30 days: ${key==='time'?formatTime(total):key==='distance'?total.toFixed(3)+' km':total.toFixed(1)+' cal'}.`;
+ const rides=state.history||[];
+ if(!rides.length){['recordLongestRide','recordBestDay','recordLongestTime'].forEach(id=>document.getElementById(id).textContent='—');document.getElementById('recordLongestRideSub').textContent='No rides yet';document.getElementById('recordBestDaySub').textContent='No rides yet';document.getElementById('recordLongestTimeSub').textContent='No rides yet'}
+ else{
+  const longest=rides.reduce((a,b)=>(Number(a.delta?.distance||0)>=Number(b.delta?.distance||0)?a:b));
+  const longestTime=rides.reduce((a,b)=>(Number(a.delta?.time||0)>=Number(b.delta?.time||0)?a:b));
+  const byDate={};rides.forEach(r=>{if(!byDate[r.date])byDate[r.date]={date:r.date,distance:0};byDate[r.date].distance+=Number(r.delta?.distance||0)});
+  const bestDay=Object.values(byDate).reduce((a,b)=>a.distance>=b.distance?a:b);
+  document.getElementById('recordLongestRide').textContent=Number(longest.delta.distance).toFixed(3)+' km';document.getElementById('recordLongestRideSub').textContent=prettyDate(longest.date);
+  document.getElementById('recordBestDay').textContent=bestDay.distance.toFixed(3)+' km';document.getElementById('recordBestDaySub').textContent=prettyDate(bestDay.date);
+  document.getElementById('recordLongestTime').textContent=formatTime(longestTime.delta.time);document.getElementById('recordLongestTimeSub').textContent=prettyDate(longestTime.date);
+ }
+ const today=new Date(),monday=new Date(today.getFullYear(),today.getMonth(),today.getDate());monday.setDate(monday.getDate()-((monday.getDay()+6)%7));const mondayISO=`${monday.getFullYear()}-${String(monday.getMonth()+1).padStart(2,'0')}-${String(monday.getDate()).padStart(2,'0')}`;
+ const weekDistance=all.filter(x=>x.date>=mondayISO&&x.date<=localDateISO()).reduce((sum,x)=>sum+Number(x.distance||0),0);
+ const goal=Math.max(.1,Number(state.weeklyDistanceGoal)||50),pct=Math.min(100,weekDistance/goal*100);
+ document.getElementById('weeklyGoalLabel').textContent=goal.toFixed(1)+' km';document.getElementById('weeklyGoalFill').style.width=pct+'%';document.getElementById('weeklyGoalProgress').textContent=weekDistance.toFixed(3)+' km';document.getElementById('weeklyGoalRemaining').textContent=weekDistance>=goal?'Weekly goal reached!':(goal-weekDistance).toFixed(3)+' km to go';
+}
+function render(){const base=latest(),days=allDaily();const totalTime=days.reduce((a,x)=>a+x.time,0),totalDist=days.reduce((a,x)=>a+x.distance,0),totalCal=days.reduce((a,x)=>a+x.calories,0);document.getElementById('totalTime').textContent=formatTime(totalTime);document.getElementById('totalDistance').textContent=totalDist.toFixed(3)+' km';document.getElementById('totalKcal').textContent=totalCal.toFixed(1)+' cal';document.getElementById('latestWeight').textContent=state.latestWeight==null?'—':Number(state.latestWeight).toFixed(2)+' kg';document.getElementById('heroWeight').textContent=state.latestWeight==null?'—':Number(state.latestWeight).toFixed(2)+' kg';document.getElementById('heroTarget').textContent=Number(state.target).toFixed(2)+' kg';document.getElementById('weightSub').textContent=state.latestWeight==null?'Add a weight reading to begin':'latest recorded value';let remain=state.latestWeight==null?null:Math.max(0,state.latestWeight-state.target);document.getElementById('goalCurrent').textContent=state.latestWeight==null?'—':Number(state.latestWeight).toFixed(2)+' kg';document.getElementById('goalPercent').textContent=remain===null?'No weight':remain===0?'Target reached':remain.toFixed(2)+' kg to go';let start=state.startingWeight??state.latestWeight??state.target,progress=state.latestWeight==null||start===state.target?0:Math.min(100,Math.max(0,(start-state.latestWeight)/(start-state.target)*100));document.getElementById('goalFill').style.width=progress+'%';document.getElementById('goalCyclist').style.left=Math.min(96,Math.max(0,progress))+'%';document.getElementById('goalText').textContent=remain===null?'Add a body-weight reading to track progress.':remain===0?'You have reached your target weight.':remain.toFixed(2)+' kg remaining to target based on latest recorded weight.';document.getElementById('goalTargetLabel').textContent=Number(state.target).toFixed(2)+' kg';const predTime=document.getElementById('predictionTime'),predDistance=document.getElementById('predictionDistance'),predCalories=document.getElementById('predictionCalories'),predIntro=document.getElementById('predictionIntro'),predNote=document.getElementById('predictionNote');const totalMinutes=totalTime/60,weightGap=state.latestWeight==null?null:Math.max(0,state.latestWeight-state.target),calPerMinute=totalMinutes>0?totalCal/totalMinutes:0,calPerKm=totalDist>0?totalCal/totalDist:0;if(weightGap===null||weightGap===0){predTime.textContent='—';predDistance.textContent='—';predCalories.textContent='—';predIntro.textContent=weightGap===0?'Target reached — keep building a sustainable routine.':'Add a body-weight reading to estimate your next milestone.';predNote.textContent='This is a rough planning estimate, not a promise. Body weight is also affected by nutrition, hydration and other factors.'}else if(totalMinutes<1||totalCal<=0||totalDist<=0){predTime.textContent='—';predDistance.textContent='—';predCalories.textContent='—';predIntro.textContent='Log a few rides to establish your personal average.';predNote.textContent='Predictions will appear once there is enough cycling data. Increase activity gradually and do not chase a calorie target in one ride.'}else{const energyEquivalent=weightGap*7700;const estimateMinutes=energyEquivalent/calPerMinute;const estimateDistance=energyEquivalent/calPerKm;predTime.textContent=formatTime(Math.round(estimateMinutes*60));predDistance.textContent=estimateDistance.toLocaleString('en-IN',{maximumFractionDigits:0})+' km';predCalories.textContent=Math.round(energyEquivalent).toLocaleString('en-IN')+' cal';predIntro.textContent=`About ${weightGap.toFixed(2)} kg to your target, estimated from your logged cycling averages.`;predNote.textContent=`A rough estimate using the common ~7,700 kcal-per-kg rule of thumb and your logged average (${calPerMinute.toFixed(1)} meter-calorie units/min). This assumes your bike's displayed ‘cal’ means the usual fitness-machine Calories (kcal equivalent); saved readings are not converted. Weight change also depends on food intake and other factors. Spread activity over weeks and increase gradually—don’t chase this in one ride.`}document.getElementById('dailySummary').innerHTML=days.slice().reverse().slice(0,8).map(x=>`<div class="historyrow"><div><strong>${prettyDate(x.date)}</strong><div class="meta">${formatTime(x.time)} · ${x.distance.toFixed(3)} km</div></div><div class="value">${x.calories.toFixed(1)} cal</div></div>`).join('')||'<div class="empty">No rides recorded yet. Save your first ride to see your daily activity here.</div>';renderInsights(days,totalDist);renderHistory()}function renderHistory(){
+const from=document.getElementById('historyFrom')?.value||'';
+const to=document.getElementById('historyTo')?.value||'';
+const sort=document.getElementById('historySort')?.value||'newest';
+const activity=document.getElementById('historyActivityFilter')?.value||'all';
+let entries=state.history.filter(h=>(!from||h.date>=from)&&(!to||h.date<=to));
+entries=entries.filter(h=>activity==='distance5'?Number(h.delta?.distance||0)>=5:activity==='distance10'?Number(h.delta?.distance||0)>=10:activity==='time30'?Number(h.delta?.time||0)>=1800:true);
+entries.sort((a,b)=>sort==='oldest'?(a.date.localeCompare(b.date)||a.id-b.id):(b.date.localeCompare(a.date)||b.id-a.id));
+const count=entries.length;
+const totalDistance=entries.reduce((sum,h)=>sum+Number(h.delta?.distance||0),0);
+const totalCalories=entries.reduce((sum,h)=>sum+Number(h.delta?.calories||0),0);
+const totalTime=entries.reduce((sum,h)=>sum+Number(h.delta?.time||0),0);
+document.getElementById('historyCount').textContent=count+' '+(count===1?'ride':'rides');
+document.getElementById('historyFilterHelp').textContent=(from||to||activity!=='all')?`Showing ${count} ride${count===1?'':'s'}${from?' from '+prettyDate(from):''}${to?' through '+prettyDate(to):''}${activity!=='all'?' · '+document.querySelector('#historyActivityFilter option:checked').textContent:''}.`:`Showing all ${count} saved ride${count===1?'':'s'}.`;
+document.getElementById('historyTotals').innerHTML=`<div class="history-total"><span>Ride time</span><strong>${formatTime(totalTime)}</strong></div><div class="history-total"><span>Distance</span><strong>${totalDistance.toFixed(3)} km</strong></div><div class="history-total"><span>Calories</span><strong>${totalCalories.toFixed(1)} cal</strong></div>`;
+document.getElementById('historyList').innerHTML=count?entries.map(h=>{
+const st=h.start||{time:(h.reading?.time||0)-(h.delta?.time||0),distance:(h.reading?.distance||0)-(h.delta?.distance||0),calories:(h.reading?.calories||0)-(h.delta?.calories||0)};
+return `<div class="historyrow"><div><strong>${prettyDate(h.date)} · ${formatTime(h.delta.time)}</strong><div class="history-detail">Start meter: ${formatTime(st.time)} · ${Number(st.distance).toFixed(3)} km · ${Number(st.calories).toFixed(1)} cal</div><div class="history-detail">End meter: ${formatTime(h.reading.time)} · ${Number(h.reading.distance).toFixed(3)} km · ${Number(h.reading.calories).toFixed(1)} cal</div>${h.weight!=null?`<div class="meta">Weight recorded: ${Number(h.weight).toFixed(2)} kg</div>`:''}</div><div class="value">+${Number(h.delta.distance).toFixed(3)} km<br><span class="mini">+${Number(h.delta.calories).toFixed(1)} cal</span></div></div>`;
+}).join(''):'<div class="empty">'+(state.history.length?'No rides match these dates. Clear the filters to see all saved rides.':'No rides saved yet. Save your first ride and it will appear here.')+'</div>';
+}function csvEscape(v){return '"'+String(v??'').replaceAll('"','""')+'"'}function exportCsv(){const rows=[['Date','Start time','End time','Time increment','Start distance (km)','End distance (km)','Distance increment (km)','Start calories (cal)','End calories (cal)','Calories increment (cal)','Weight (kg)']];for(const h of state.history)rows.push([h.date,formatTime(h.start?.time??(h.reading.time-h.delta.time)),formatTime(h.reading.time),formatTime(h.delta.time),h.start?.distance??(h.reading.distance-h.delta.distance),h.reading.distance,h.delta.distance,h.start?.calories??(h.reading.calories-h.delta.calories),h.reading.calories,h.delta.calories,h.weight??'']);const csv='\ufeff'+rows.map(r=>r.map(csvEscape).join(',')).join('\r\n');download(new Blob([csv],{type:'text/csv;charset=utf-8;'}),'cyclelog-readings.csv')}function download(blob,name){const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)}['historyFrom','historyTo','historySort','historyActivityFilter'].forEach(id=>document.getElementById(id).addEventListener('change',renderHistory));document.getElementById('clearHistoryFilters').addEventListener('click',()=>{document.getElementById('historyFrom').value='';document.getElementById('historyTo').value='';document.getElementById('historySort').value='newest';document.getElementById('historyActivityFilter').value='all';renderHistory()});document.querySelectorAll('[data-tab]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-tab]').forEach(x=>x.classList.toggle('active',x===b));document.querySelectorAll('.section').forEach(x=>x.classList.toggle('active',x.id===b.dataset.tab));if(b.dataset.tab==='log')updatePreview()}));['startDistance','startCalories','distance','calories'].forEach(id=>document.getElementById(id).addEventListener('input',updatePreview));['startDistance','startCalories','distance','calories'].forEach(id=>document.getElementById(id).addEventListener('change',updatePreview));['startTime','endTime'].forEach(prefix=>['Hours','Minutes','Seconds'].forEach(part=>document.getElementById(prefix+part).addEventListener('change',()=>syncDuration(prefix,prefix==='startTime'?'startTimeDisplay':'timeReading'))));document.getElementById('save').addEventListener('click',saveRide);document.getElementById('saveStart').addEventListener('click',saveStartReadings);document.getElementById('toggleLock').addEventListener('click',toggleStartLock);document.getElementById('export').addEventListener('click',exportCsv);document.getElementById('saveSettings').addEventListener('click',()=>{const t=parseTimeSettings(),d=num('setDistance'),c=num('setCalories'),g=num('setTarget'),weeklyGoal=num('setWeeklyDistanceGoal');if(t===null||d===null||c===null||g===null||weeklyGoal===null||d<0||c<0||g<=0||weeklyGoal<=0){toast('Check the settings values.');return}state.baseline={...state.baseline,time:t,distance:d,calories:c};state.target=g;state.weeklyDistanceGoal=weeklyGoal;refreshStartFields();persist();updatePreview();toast('Settings saved. Existing readings were preserved.')});document.getElementById('backup').addEventListener('click',()=>download(new Blob([JSON.stringify({app:'CycleLog',version:'2.9',exportedAt:new Date().toISOString(),data:state,pendingReadings:pending},null,2)],{type:'application/json'}),'cyclelog-backup-v2.9.json'));document.getElementById('reset').addEventListener('click',()=>{document.getElementById('resetConfirm').hidden=false;document.getElementById('cancelReset').focus()});
+document.getElementById('cancelReset').addEventListener('click',()=>{document.getElementById('resetConfirm').hidden=true});
+document.getElementById('resetConfirm').addEventListener('click',e=>{if(e.target.id==='resetConfirm')document.getElementById('resetConfirm').hidden=true});
+document.getElementById('confirmReset').addEventListener('click',()=>{try{localStorage.removeItem(KEY);localStorage.removeItem(PENDING_KEY);pending=null;state=JSON.parse(JSON.stringify(initial));persist();refreshStartFields();document.getElementById('resetConfirm').hidden=true;toast('All ride data reset. Meter readings are now 0.')}catch(e){toast('Reset failed. Your stored data may still be present.')}});
+document.querySelectorAll('[data-period]').forEach(b=>b.addEventListener('click',()=>{chartPeriod=b.dataset.period;document.querySelectorAll('[data-period]').forEach(x=>x.classList.toggle('active',x===b));render()}));
+document.querySelectorAll('[data-metric]').forEach(b=>b.addEventListener('click',()=>{chartMetric=b.dataset.metric;document.querySelectorAll('[data-metric]').forEach(x=>x.classList.toggle('active',x===b));render()}));
+setupDuration('setTime');setupDuration('startTime',999);setupDuration('endTime',999);refreshStartFields();fillDuration('endTime',latest().time);document.getElementById('timeReading').value=formatClock(latest().time);document.getElementById('rideDate').value=localDateISO();fillDuration('setTime',state.baseline.time);document.getElementById('setDistance').value=state.baseline.distance;document.getElementById('setCalories').value=state.baseline.calories;document.getElementById('setTarget').value=state.target;document.getElementById('setWeeklyDistanceGoal').value=state.weeklyDistanceGoal||50;document.querySelectorAll('[data-tab]').forEach(b=>b.classList.toggle('active',b.dataset.tab==='log'));document.querySelectorAll('.section').forEach(section=>section.classList.toggle('active',section.id==='log'));render();updatePreview();if('serviceWorker'in navigator&&location.protocol.startsWith('http'))navigator.serviceWorker.register('./sw.js').catch(()=>{});
+
+loadTheme();document.getElementById('darkModeToggle')?.addEventListener('change',setThemeFromToggle);
+
+const WELCOME_KEY=null;
+function closeWelcome(){document.getElementById('welcomeScreen').hidden=true;document.querySelector('.app').hidden=false;}
+function initWelcome(){document.getElementById('welcomeScreen').hidden=false;document.querySelector('.app').hidden=true}
+document.getElementById('getStarted')?.addEventListener('click',closeWelcome);
+
+initWelcome();
 </script></body></html>
