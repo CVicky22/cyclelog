@@ -1,0 +1,12 @@
+# Local editor and operating-system files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Personal exports and backups — do not commit these
+*.csv
+*backup*.json
+*export*.json
+*.xlsx
+*.xls

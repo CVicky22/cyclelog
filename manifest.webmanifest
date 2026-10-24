@@ -1,0 +1,10 @@
+{
+  "name": "CycleLog Indoor Cycling Tracker",
+  "short_name": "CycleLog",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f5f8f5",
+  "theme_color": "#142d25",
+  "description": "Track cumulative indoor cycling meter readings and daily differences."
+}
